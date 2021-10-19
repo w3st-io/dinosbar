@@ -1,0 +1,31 @@
+$theme-colors: (
+	'primary': #5100adcc,
+	'secondary': rgb(123, 196, 206),
+	'info': rgb(94, 143, 250),
+);
+
+
+// [IMPORT] //
+@import 'bootstrap/scss/bootstrap.scss';
+
+
+.btn {
+	border-radius: 0 !important;
+}
+
+.btn-secondary {
+	color: white !important;
+}
+
+.bg-shade {
+	background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.bg-shine {
+	background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+// [CONTAINER] //
+@media (min-width: 1600px) {
+	.container { max-width: 1500px; }
+}
