@@ -1,78 +1,60 @@
 <template>
-	<div class="w-100 bg-black border-bottom border-primary shadow">
-		<BContainer bg-variant="dark" class="d-flex justify-content-between container-fluid pt-3 mb-1">
-			<!-- Title -->
-			<div class="text-left">
-				<RouterLink to="/" class="text-decoration-none">
-					<img :src="require('../../assets/logov2.png')"
-						class="w-100 mb-2" style="max-width: 130px;"
-					>
-					<!--
-					<h6
-						v-html="companyInfo.companyCaption1"
-						class="m-0 font-weight-bold text-secondary"
-						style="font-size: .8em;"
-					></h6>
-					-->
-				</RouterLink>
+	<div class="w-100" >
+		<div class="logo-holder-holder">
+			<div class="text-center bg-primary logo-holder" style="z-index: 99;">
+				<h1 class="m-0 p-0 title text-light">DINO'S</h1>
+				<h6 class="m-0 pb-3 caption text-dark">Bar & Grill</h6>
 			</div>
+		</div>
 
-			<!-- Links -->
-			<div class="d-none d-lg-block mx-auto">
-				<a v-if="companyInfo.googleMapsLink" :href="companyInfo.googleMapsLink">
-					<BButton variant="none" class="w-100 mb-2 text-primary">
-						<h5 class="m-0">
-							<MapPinIcon size="1x"/> {{ companyInfo.address }}
-						</h5>
-					</BButton>
-				</a>
-				<hr class="my-2 border-light">
-
-				<!-- Menu Items -->
-				<RouterLink
-					v-for="(button, i) in buttons"
-					:key="i"
-					:to="button.path"
-				>
+		<div class="d-none d-lg-flex w-100 bg-black">
+			<div class="ml-auto text-right menu-section">
+				<RouterLink to="/" class="">
 					<BButton
-						variant="none"
-						class="mx-4 px-1 py-4 font-weight-bold shadow-none text-secondary menu-link"
-					>
-						<span v-if="button.navIcon" v-html="button.navIcon"></span>
-						<span v-else>{{ button.text }}</span>
-					</BButton>
+						variant="dark"
+						class="mx-3 py-3 text-light menu-link"
+						style="width: 100px;"
+					>HOME</BButton>
+				</RouterLink>
+
+				<RouterLink to="/menu" class="text-light">
+					<BButton
+						variant="dark"
+						class="mx-3 py-3 text-light menu-link"
+						style="width: 100px;"
+					>MENU</BButton>
 				</RouterLink>
 			</div>
 
-			<!-- Phone # & Social Media -->
-			<div class="ml-auto text-right">
-				<a :href="companyInfo.phoneNumberLink">
-					<BButton variant="outline-primary" class="mb-3 px-4"
-						style="border-width: 2px; border-radius: 8px !important;"
-					>
-						<PhoneIcon stroke-width="2" size="1.5x" />
-					</BButton>
-				</a>
-
-				<div class="w-100">
-					<SocialMediaPlug
-						size="1.8x"
-						variant="secondary"
-						class="d-none d-sm-block float-lg-right"
-					/>
-				</div>
+			<div class="text-center" style="width: 350px;">
+				SHOULD NOT BE VISIBLE
 			</div>
-		</BContainer>
 
-		<BContainer>
+			<div class="mr-auto text-left menu-section">
+				<RouterLink to="/contact" class="">
+					<BButton
+						variant="dark"
+						class="mx-3 py-3 text-light menu-link"
+						style="width: 100px;"
+					>CONTACT</BButton>
+				</RouterLink>
+
+				<RouterLink to="/about" class="">
+					<BButton
+						variant="dark"
+						class="mx-3 py-3 text-light menu-link"
+						style="width: 100px;"
+					>ABOUT</BButton>
+				</RouterLink>
+			</div>
+		</div>
+
+		<BContainer fluid class="d-block d-lg-none m-0 p-0 bg-black text-right">
 			<!-- [HIDDEN] Menu Button -->
-			<div class="w-100 d-block d-lg-none mb-3">
-				<BButton
-					variant="secondary"
-					class="w-100"
-					@click="toggle()"
-				><MenuIcon /></BButton>
-			</div>
+			<BButton
+				variant="secondary"
+				@click="toggle()"
+			><MenuIcon size="3x" /></BButton>
 		</BContainer>
 
 		<!-- Hidden Side Menu -->
@@ -81,22 +63,19 @@
 </template>
 
 <script>
-	import { MapPinIcon, MenuIcon, PhoneIcon } from 'vue-feather-icons'
+	// [IMPORT] //
+	import { MenuIcon } from 'vue-feather-icons'
 
 	// [IMPORT] Personal //
 	import SideMenu from '@/components/nav/SideMenu'
-	import SocialMediaPlug from '@/components/SocialMediaPlug'
 	import companyInfo from '@/defaults/companyInfo'
 	import buttons from '@/defaults/pageLinks'
 	import router from '@/router'
 
 	export default {
 		components: {
-			MapPinIcon,
 			MenuIcon,
-			PhoneIcon,
 			SideMenu,
-			SocialMediaPlug
 		},
 
 		data() {
@@ -118,22 +97,39 @@
 <style lang="scss" scoped>
 	@import '../../assets/styles/bootstrap-override.scss';
 
+	.logo-holder-holder {
+		position: absolute;
+		left: calc(50% - 175px);
+
+		@media (max-width: 768px) {
+			left: 0;
+		}
+	}
+
+	.logo-holder {
+		position: relative;
+		width: 350px;
+
+		.title { font-size: 4em; }
+		.caption { font-size: 2em; }
+
+		@media (max-width: 768px) {
+			width: 200px;
+
+			.title { font-size: 3em; }
+			.caption { font-size: 1em; }
+		}
+	}
+
 	.menu-link {
 		:hover {
 			@extend .text-primary;
 		}
 	}
 
-	@media (min-width: 1600px) {
-		.menu-link {
-			margin: 0 50px !important;
-		}
-	}
-
 	.router-link-exact-active {
 		.menu-link {
 			@extend .text-primary;
-			@extend .border-bottom;
 		}
 	}
 </style>
