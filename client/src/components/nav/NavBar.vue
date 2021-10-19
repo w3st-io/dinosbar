@@ -1,5 +1,5 @@
 <template>
-	<div class="w-100 bg-light border-bottom border-primary shadow">
+	<div class="w-100 bg-black border-bottom border-primary shadow">
 		<BContainer bg-variant="dark" class="d-flex justify-content-between container-fluid pt-3 mb-1">
 			<!-- Title -->
 			<div class="text-left">
