@@ -1,14 +1,12 @@
 <template>
 	<div>
-		<!-- Caraousel -->
-		<BCarousel
-			:showContent="true"
-			:mainText="'Healing for the Mind, Body, and Soul..'"
-			:slideObjs="pageData.caraousel"
-			:maxHeight="600"
-			:rellaxNumber="1"
-			class="mb-5 shadow"
-			data-aos="fade-up"
+		<Hero
+			:backgroundImgs="[
+				require('../assets/images/pages/index/hero1.jpg'),
+				require('../assets/images/pages/index/hero2.jpg'),
+				require('../assets/images/pages/index/hero3.jpg'),
+				require('../assets/images/pages/index/hero4.jpg'),
+			]"
 		/>
 
 		<!-- Star Details -->
@@ -261,9 +259,10 @@
 
 <script>
 	// [IMPORT] Personal //
+	import BCarousel from '@/components/display/BCarousel'
+	import Hero from '../components/home/Hero'
 	import PageService from '../services/PageService'
 	import pageData from '@/defaults/pages'
-	import BCarousel from '@/components/display/BCarousel'
 	import router from '@/router'
 
 	export default {
@@ -271,6 +270,7 @@
 
 		components: {
 			BCarousel,
+			Hero,
 		},
 
 		data() {
