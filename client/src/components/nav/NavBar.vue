@@ -6,7 +6,7 @@
 				:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
 				style="z-index: 99;"
 			>
-				<img :src="require('../../assets/images/dinos-logo.png')" alt="" class="w-100">
+				<img :src="require('../../assets/images/dinos-dark.png')" alt="" class="w-100">
 			</div>
 		</div>
 
