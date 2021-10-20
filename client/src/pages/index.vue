@@ -284,7 +284,13 @@
 			}
 		},
 
+		methods: {
+			redirectCompanyInfo() { router.push({ name: 'book' }) },
+		},
+
 		async created() {
+			this.$store.state.isHomePage = true
+
 			this.reqData = await PageService.s_()
 
 			if (this.reqData.status) {
@@ -294,13 +300,13 @@
 			}
 		},
 
-		mounted() {
-			this.show = true
+		destroyed() {
+			this.$store.state.isHomePage = false
 		},
 
-		methods: {
-			redirectCompanyInfo() { router.push({ name: 'book' }) },
-		},
+		mounted() {
+			this.show = true
+		}
 	}
 </script>
 

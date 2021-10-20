@@ -21,6 +21,8 @@ export default new Vuex.Store({
 
 		adminLogged: false,
 		admin_decoded: {},
+
+		isHomePage: false
 	},
 
 	// Syncrous //

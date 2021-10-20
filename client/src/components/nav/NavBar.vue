@@ -1,5 +1,9 @@
 <template>
-	<div class="w-100" >
+	<div
+		class="w-100 fixed-top transition"
+		:class="[navClass, { 'bg-black': !$store.state.isHomePage }]"
+	>
+
 		<div class="logo-holder-holder">
 			<div class="text-center bg-primary logo-holder" style="z-index: 99;">
 				<h1 class="m-0 p-0 title text-light">DINO'S</h1>
@@ -7,20 +11,22 @@
 			</div>
 		</div>
 
-		<div class="d-none d-lg-flex w-100 bg-black">
+		<div class="d-none d-lg-flex w-100 bg-">
 			<div class="ml-auto text-right menu-section">
 				<RouterLink to="/" class="">
 					<BButton
-						variant="dark"
+						variant="none"
 						class="mx-3 py-3 text-light menu-link"
+						:class="titleClass"
 						style="width: 100px;"
 					>HOME</BButton>
 				</RouterLink>
 
 				<RouterLink to="/menu" class="text-light">
 					<BButton
-						variant="dark"
+						variant="none"
 						class="mx-3 py-3 text-light menu-link"
+						:class="titleClass"
 						style="width: 100px;"
 					>MENU</BButton>
 				</RouterLink>
@@ -33,16 +39,18 @@
 			<div class="mr-auto text-left menu-section">
 				<RouterLink to="/contact" class="">
 					<BButton
-						variant="dark"
+						variant="none"
 						class="mx-3 py-3 text-light menu-link"
+						:class="titleClass"
 						style="width: 100px;"
 					>CONTACT</BButton>
 				</RouterLink>
 
 				<RouterLink to="/about" class="">
 					<BButton
-						variant="dark"
+						variant="none"
 						class="mx-3 py-3 text-light menu-link"
+						:class="titleClass"
 						style="width: 100px;"
 					>ABOUT</BButton>
 				</RouterLink>
@@ -80,6 +88,8 @@
 
 		data() {
 			return {
+				titleClass: '',
+				navClass: '',
 				companyInfo: companyInfo,
 				buttons: buttons,
 				loggedIn: false,
@@ -90,12 +100,35 @@
 
 		methods: {
 			toggle() { this.$store.state.showMenu = !this.$store.state.showMenu },
+
+			handleScroll() {
+				if (window.scrollY > 0) {
+					this.navClass = 'bg-black'
+					this.titleClass = 'text-white'
+				}
+				else {
+					this.navClass = ''
+					this.titleClass = ''
+				}
+			},
+		},
+
+		created() {
+			window.addEventListener('scroll', this.handleScroll)
 		},
 	}
 </script>
 
 <style lang="scss" scoped>
 	@import '../../assets/styles/bootstrap-override.scss';
+
+	.transition {
+		transition: .5s;
+	}
+
+	.nav {
+		z-index: 100;
+	}
 
 	.logo-holder-holder {
 		position: absolute;
@@ -119,6 +152,10 @@
 			.title { font-size: 3em; }
 			.caption { font-size: 1em; }
 		}
+	}
+
+	.bg-menu {
+		
 	}
 
 	.menu-link {
