@@ -6,71 +6,19 @@
 			class="mb-3"
 		/>
 
-		<!-- Star Details -->
-		<BContainer class="mb-5 text-center">
-			<BCard
-				no-body
-				bg-variant="primary"
-				class="my-5 rounded-0 shadow"
-				style="
-					background-image: url('https://images2.imgbox.com/c2/ae/Wi5C61BU_o.jpg') !important;
-					background-position: right;
-				"
-			>
-				<div class="p-3 text-light bg-shade">
-					<!-- Captions -->
-					<h1 class="text-light">
-						{{ pageData.headerDetails.caption1 }}
-					</h1>
-					
-					<!-- Address -->
-					<p
-						v-if="pageData.headerDetails.hoursOfOperation.length > 0"
-						class="h6 mb-4 text-center font-weight-bold text-secondary"
-					>Our Hours</p>
-					
-					<!-- Hours of Operation -->
-					<ul
-						v-if="pageData.headerDetails.hoursOfOperation.length > 0"
-						class="m-0 mb-4 p-0 text-dark"
-					>
-						<li
-							v-for="(hoo, index) in pageData.headerDetails.hoursOfOperation"
-							:key="index"
-							class="m-0 list-unstyled text-center"
-						><p class="h6">{{ hoo.days }}<br>{{ hoo.hours }}</p></li>
-					</ul>
-
-					<h4 class="mb-3 text-light">{{ pageData.headerDetails.text }}</h4>
-
-					<RouterLink to="/book">
-						<BButton size="lg" variant="secondary" class="">
-							Contact Us
-						</BButton>
-					</RouterLink>
-				</div>
-			</BCard>
-		</BContainer>
-
 		<!-- About Balance Within -->
-		<BContainer fluid class="bg-white border-top border-secondary">
+		<BContainer fluid class="bg-white">
 			<BContainer class="py-5">
-				<BRow>
-					<BCol cols="12" md="4" class="d-none d-md-block">
-						<div class="text-center">
-							<img
-								:src="pageData.bodyDetails.row0.image"
-								class="w-100"
-								style="max-width: 300px;"
-							>
-						</div>
-					</BCol>
-
-					<BCol cols="12" md="8">
+				<BRow class="my-5">
+					<BCol cols="12" md="6">
 						<div data-aos="fade-up">
 							<h1 class="text-center text-primary">
 								{{ pageData.bodyDetails.row0.header }}
 							</h1>
+							<h6 class="text-center text-muted">
+								{{ pageData.companyInfo.companyCaption1 }}
+							</h6>
+
 							<br>
 							<p
 								v-html="pageData.bodyDetails.row0.aboutCompanyHTML"
@@ -88,50 +36,17 @@
 							</div>
 						</div>
 					</BCol>
-				</BRow>
-			</BContainer>
-		</BContainer>
 
-		<!-- About Me -->
-		<BContainer fluid class="bg-white border-top border-secondary">
-			<BContainer class="py-5">
-				<BRow>
-					<BCol cols="12" md="8" order="1" order-md="0">
-						<div data-aos="fade-up">
-							<h1 class="text-center text-primary">
-								{{ pageData.bodyDetails.row1.header }}
-							</h1>
-							<h5 class="text-center text-secondary">
-								{{ pageData.bodyDetails.row1.header2 }}
-							</h5>
-							<br>
-							<p
-								v-html="pageData.bodyDetails.row1.messageHTML"
-								class="mb-4 h5 text-dark"
-							></p>
-
-							<div class="w-100 text-center">
-								<RouterLink to="/our-team">
-									<BButton
-										variant="secondary"
-										size="lg"
-										class="mb-4 shadow"
-									>Read More</BButton>
-								</RouterLink>
-							</div>
+					<BCol cols="12" md="6" class="d-none d-md-block">
+						<div class="text-center">
+							<img
+								:src="pageData.bodyDetails.row0.image"
+								class="w-100"
+								style="max-width: 600px;"
+							>
 						</div>
 					</BCol>
 
-					<!-- Pamela Image -->
-					<BCol cols="12" md="4" order="0" order-md="1">
-						<div>
-							<BCarousel
-								:slideObjs="pageData.bodyDetails.row1.caraousel"
-								:maxHeight="600"
-								class="mb-3"
-							/>
-						</div>
-					</BCol>
 				</BRow>
 			</BContainer>
 		</BContainer>
@@ -255,7 +170,6 @@
 
 <script>
 	// [IMPORT] Personal //
-	import BCarousel from '@/components/display/BCarousel'
 	import Hero from '../components/home/Hero'
 	import PageService from '../services/PageService'
 	import pageData from '@/defaults/pages'
@@ -265,7 +179,6 @@
 		name: 'Home',
 
 		components: {
-			BCarousel,
 			Hero,
 		},
 

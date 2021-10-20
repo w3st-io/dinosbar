@@ -2,6 +2,8 @@ const companyInfo = require('../companyInfo')
 
 
 module.exports = {
+	companyInfo: companyInfo,
+	
 	// [HERO] Caraousel Slider //
 	caraousel: [
 		{
@@ -32,30 +34,9 @@ module.exports = {
 
 	bodyDetails: {
 		row0: {
-			image: companyInfo.companyLogo,
+			image: require('../../assets/images/pages/index/dinos-front.png'),
 			header: `About ${companyInfo.companyName}`,
 			aboutCompanyHTML: companyInfo.aboutHTML
-		},
-
-		row1: {
-			header: 'Pamela, CEO/Founder of Balance Within',
-			
-			header2: 'Intuitive Empath, Light-worker and Energy Facilitator, Reiki Practitioner and Wellness Coach',
-
-			messageHTML: companyInfo.messageHTML,
-
-			caraousel: [
-				{
-					caption: '',
-					text: '',
-					img: require('../../assets/images/pages/index/owner.jpg'),
-				},
-				{
-					caption: '',
-					text: '',
-					img: require('../../assets/images/pages/index/profile.jpg'),
-				},
-			],
 		},
 	},
 }
