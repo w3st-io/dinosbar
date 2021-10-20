@@ -37,7 +37,6 @@
 
 		<!-- PUT IN CENTER OF SLIDER -->
 		<div class="slider-center">
-			{{ $store.state.window.innerWidth }}
 			<BButton variant="light" size="lg">DIRECTIONS!</BButton>
 		</div>
 	</div>
@@ -60,7 +59,7 @@
 
 			rellaxNumber: {
 				type: Number,
-				default: -8,
+				default: -6,
 			},
 		},
 
@@ -124,15 +123,17 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 
+		// On screen below 1200px //
+		@media (max-width: 1400px) { top: 35%; }
+		
+		// On screen below 1200px //
+		@media (max-width: 1200px) { top: 40%; }
+
 		// On screen below 992px //
-		@media (max-width: 992px) {
-			top: 45%;
-		}
+		@media (max-width: 992px) { top: 45%; }
 
 		// On screen below 768px //
-		@media (max-width: 768px) {
-			top: 50%;
-		}
+		@media (max-width: 768px) { top: 50%; }
 	}
 
 	.slide-text {
