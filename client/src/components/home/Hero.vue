@@ -30,7 +30,7 @@
 									border border-light
 									slide-text
 								"
-							>{{ s.text }} {{ $store.state.window.innerWidth }}</h1>
+							>{{ s.text }}</h1>
 						</div>
 					</div>
 				</div>
@@ -57,11 +57,6 @@
 			slides: {
 				type: Array,
 				required: true,
-			},
-
-			rellaxNumber: {
-				type: Number,
-				default: -6,
 			},
 		},
 
