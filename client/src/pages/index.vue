@@ -1,12 +1,9 @@
 <template>
-	<div>
+	<div v-if="loading == false">
 		<Hero
-			:backgroundImgs="[
-				require('../assets/images/pages/index/hero1.jpg'),
-				require('../assets/images/pages/index/hero2.jpg'),
-				require('../assets/images/pages/index/hero3.jpg'),
-				require('../assets/images/pages/index/hero4.jpg'),
-			]"
+			:slides="pageData.caraousel"
+			:maxHeight="1000"
+			class="mb-3"
 		/>
 
 		<!-- Star Details -->
@@ -22,7 +19,7 @@
 			>
 				<div class="p-3 text-light bg-shade">
 					<!-- Captions -->
-					<h1 class="text-light hero-text">
+					<h1 class="text-light">
 						{{ pageData.headerDetails.caption1 }}
 					</h1>
 					
@@ -70,8 +67,8 @@
 					</BCol>
 
 					<BCol cols="12" md="8">
-						<div v-if="show" data-aos="fade-up">
-							<h1 class="text-center text-primary fancy-text">
+						<div data-aos="fade-up">
+							<h1 class="text-center text-primary">
 								{{ pageData.bodyDetails.row0.header }}
 							</h1>
 							<br>
@@ -100,8 +97,8 @@
 			<BContainer class="py-5">
 				<BRow>
 					<BCol cols="12" md="8" order="1" order-md="0">
-						<div v-if="show" data-aos="fade-up">
-							<h1 class="text-center text-primary fancy-text">
+						<div data-aos="fade-up">
+							<h1 class="text-center text-primary">
 								{{ pageData.bodyDetails.row1.header }}
 							</h1>
 							<h5 class="text-center text-secondary">
@@ -127,9 +124,8 @@
 
 					<!-- Pamela Image -->
 					<BCol cols="12" md="4" order="0" order-md="1">
-						<div v-if="show">
+						<div>
 							<BCarousel
-								v-if="show"
 								:slideObjs="pageData.bodyDetails.row1.caraousel"
 								:maxHeight="600"
 								class="mb-3"
@@ -275,9 +271,10 @@
 
 		data() {
 			return {
+				loading: true,
+
 				pageData: pageData,
 				reqData: {},
-				show: false,
 				reikiTitle: 'Reiki Title',
 				reikiDescription: 'Reiki description goes here',
 				services: [],
@@ -285,44 +282,36 @@
 		},
 
 		methods: {
+			async getPageData() {
+				this.reqData = await PageService.s_()
+
+				if (this.reqData.status) {
+					this.reikiTitle = this.reqData.reikiTitle
+					this.reikiDescription = this.reqData.reikiDescription
+					this.services = this.reqData.services
+				}
+
+				this.loading = false
+			},
+
 			redirectCompanyInfo() { router.push({ name: 'book' }) },
 		},
 
 		async created() {
 			this.$store.state.isHomePage = true
 
-			this.reqData = await PageService.s_()
-
-			if (this.reqData.status) {
-				this.reikiTitle = this.reqData.reikiTitle
-				this.reikiDescription = this.reqData.reikiDescription
-				this.services = this.reqData.services
-			}
+			await this.getPageData()
 		},
 
 		destroyed() {
 			this.$store.state.isHomePage = false
 		},
-
-		mounted() {
-			this.show = true
-		}
 	}
 </script>
 
 <style lang="scss" scoped>
-	@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-
 	.fade-enter-active,
 	.fade-leave-active { transition: opacity 1s; }
 	.fade-enter,
 	.fade-leave-to { opacity: 0; }
-
-	.hero-text {
-		font-family: 'Caveat', cursive !important;
-	}
-
-	.fancy-text {
-		font-family: 'Caveat', cursive !important;
-	}
 </style>
