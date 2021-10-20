@@ -52,7 +52,6 @@
 					autoplay: true,
 					autoplayButtonOutput: false,
 					items: 1,
-					gutter: 20,
 					autoplayTimeout: 3000,
 				}
 			}
