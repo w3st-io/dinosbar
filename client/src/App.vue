@@ -44,9 +44,9 @@
 
 <style lang="scss">
 	// [IMPORT] // heading // * //
-	@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald&family=Poppins:wght@300;400&display=swap');
 
-	* { font-family: 'Oswald', sans-serif !important; }
-	h1,h2,h3,h4,h5,h6 { font-family: 'Oswald', sans-serif !important; }
+	* { font-family: 'Lato', sans-serif !important; }
+	h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif !important; }
 
 </style>

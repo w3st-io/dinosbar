@@ -3,36 +3,33 @@
 		<Hero
 			:slides="pageData.caraousel"
 			:maxHeight="1000"
-			class="mb-3"
+			class=""
 		/>
 
-		<!-- About Balance Within -->
+		<!-- About Dinos Bar & Grill -->
 		<BContainer fluid class="bg-white">
 			<BContainer class="py-5">
-				<BRow class="my-5">
+				<BRow class="py-5">
 					<BCol cols="12" md="6">
-						<div data-aos="fade-up">
-							<h1 class="text-center text-primary">
+						<div>
+							<h1 class="text-center font-weight-bold">
 								{{ pageData.bodyDetails.row0.header }}
 							</h1>
 							<h6 class="text-center text-muted">
 								{{ pageData.companyInfo.companyCaption1 }}
 							</h6>
-
 							<br>
 							<p
 								v-html="pageData.bodyDetails.row0.aboutCompanyHTML"
 								class="mb-4 h5 text-dark"
+								data-aos="fade-up"
 							></p>
-
 							<div class="text-center">
-								<RouterLink to="/services">
-									<BButton
-										size="lg"
-										variant="secondary"
-										class="mt-3 shadow"
-									>Check Out All of Our Services</BButton>
-								</RouterLink>
+								<img
+								:src="signImage"
+								class="w-100"
+								style="max-width: 200px;"
+							>
 							</div>
 						</div>
 					</BCol>
@@ -48,6 +45,13 @@
 					</BCol>
 
 				</BRow>
+			</BContainer>
+		</BContainer>
+
+		<!-- About Dinos Bar & Grill -->
+		<BContainer fluid class="bg-white">
+			<BContainer class="py-5">
+				<Menu class="my-5" />
 			</BContainer>
 		</BContainer>
 
@@ -171,6 +175,7 @@
 <script>
 	// [IMPORT] Personal //
 	import Hero from '../components/home/Hero'
+	import Menu from '../components/home/Menu'
 	import PageService from '../services/PageService'
 	import pageData from '@/defaults/pages'
 	import router from '@/router'
@@ -180,6 +185,7 @@
 
 		components: {
 			Hero,
+			Menu,
 		},
 
 		data() {
@@ -191,6 +197,7 @@
 				reikiTitle: 'Reiki Title',
 				reikiDescription: 'Reiki description goes here',
 				services: [],
+				signImage: require('../assets/images/pages/index/sign.png')
 			}
 		},
 
