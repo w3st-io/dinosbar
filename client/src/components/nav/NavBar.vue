@@ -1,17 +1,20 @@
 <template>
-	<div
-		class="w-100 fixed-top transition"
-		:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
-	>
-
+	<div class="w-100 fixed-top">
 		<div class="logo-holder-holder">
-			<div class="text-center bg-white logo-holder" style="z-index: 99;">
+			<div
+				class="text-center logo-holder transition"
+				:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
+				style="z-index: 99;"
+			>
 				<img :src="require('../../assets/images/dinos-logo.png')" alt="" class="w-100">
 			</div>
 		</div>
 
-		<div class="d-none d-lg-flex w-100 bg-">
-			<div class="ml-auto text-right menu-section">
+		<div class="d-none d-lg-flex w-100">
+			<div
+				class="ml-auto text-right menu-section transition"
+				:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
+			>
 				<RouterLink to="/" class="">
 					<BButton
 						variant="none"
@@ -32,10 +35,13 @@
 			</div>
 
 			<div class="text-center" style="width: 350px;">
-				SHOULD NOT BE VISIBLE
+				
 			</div>
 
-			<div class="mr-auto text-left menu-section">
+			<div
+				class="mr-auto text-left menu-section transition"
+				:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
+			>
 				<RouterLink to="/contact" class="">
 					<BButton
 						variant="none"

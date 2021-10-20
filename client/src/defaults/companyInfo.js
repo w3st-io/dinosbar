@@ -5,7 +5,7 @@ module.exports = {
 	companyCaption1: 'The Boys Are Back In Town!',
 	companyCaption2: '',
 
-	companyLogo: require('../assets/logo.jpg'),
+	companyLogo: require('../assets/images/company-logo.png'),
 
 	address: '',
 	googleMapsLink: '',

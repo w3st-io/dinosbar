@@ -11,64 +11,47 @@
                 <ul class="menu-filter-list list-inline text-center">
                     <li class="is-checked" data-filter="*">All</li>
                     <li data-filter=".start">Appetizers</li>
-                    <li data-filter=".lunch">Lunch</li>
-                    <li data-filter=".dinner">Dinner</li>
+                    <li data-filter=".lunch">Salads</li>
+                    <li data-filter=".dinner">Entrees</li>
                 </ul>
 
-                <div class="row menu-filter-items">
-                    <div class="start col-md-4 margin-b-30 menu-item" :class="classs">
-                        <div class="menu-box clearfix ">
+                <BRow class="menu-filter-items">
+                    <BCol
+						v-for="(item, i) in menu" :key="i"
+						col="12" md="4"
+						class="start margin-b-30 menu-item"
+					>
+                        <div class="menu-box clearfix">
                             <div class="thumb">
-                                <img src="assets/images/wings.png" width="70" alt="">
+                                <img :src="item.img || placeholderImg" width="70">
                             </div>
+
                             <div class="menu-content">
-                                <h4><a href="#">Buffalo Wings</a> <span>$10.00</span></h4>
-                                <p>Mild, Medium, Hot, Atomic, Teriyaki, BBQ, Thai</p>
+                                <h4 class="text-primary">
+									<a href="#" class="text-primary">
+										{{ item.name }}
+									</a>
+									<span>{{ item.costString }}</span>
+								</h4>
+                                <p class="text-dark">{{ item.description }}i</p>
                             </div>
                         </div>
-                    </div>
-                    <!--end col-->
-
-                    <div class=" lunch dinner col-md-4 margin-b-30 menu-item">
-                        <div class="menu-box clearfix ">
-                            <div class="thumb">
-                                <img src="assets/images/dinos-logo.png" width="70" alt="">
-                            </div>
-                            <div class="menu-content">
-                                <h4><a href="#">House Salad</a> <span>$9</span></h4>
-                                <p>Large salad, with fresh seasonal greens, veggies &amp; house dressing. w/chicken $4</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-
-
-                    <div class=" dinner col-md-4 margin-b-30 menu-item">
-                        <div class="menu-box clearfix ">
-                            <div class="thumb">
-                                <img src="assets/images/dinos-logo.png" width="70" alt="">
-                            </div>
-                            <div class="menu-content">
-                                <h4><a href="#">Special Coffee</a> <span>$7.79</span></h4>
-                                <p>pellentesque enim. Aliquam tempor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-
-                </div>
+                    </BCol>
+                </BRow>
             </div>
-            <div class="space-50"></div>
         </section>
         <!--end menu-->
 	</div>
 </template>
 
 <script>
+import menu from '../../defaults/menu'
+
 export default {
 	data() {
 		return {
-			classs: ''
+			menu: menu,
+			placeholderImg: require('../../assets/images/company-logo.png')
 		}
 	},
 	created() {
