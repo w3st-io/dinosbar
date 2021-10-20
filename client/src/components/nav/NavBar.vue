@@ -61,6 +61,7 @@
 			<!-- [HIDDEN] Menu Button -->
 			<BButton
 				variant="secondary"
+				class="px-5"
 				@click="toggle()"
 			><MenuIcon size="3x" /></BButton>
 		</BContainer>
@@ -154,10 +155,6 @@
 		}
 	}
 
-	.bg-menu {
-		
-	}
-
 	.menu-link {
 		:hover {
 			@extend .text-primary;
@@ -167,6 +164,8 @@
 	.router-link-exact-active {
 		.menu-link {
 			@extend .text-primary;
+
+			box-shadow: 0 !important;
 		}
 	}
 </style>

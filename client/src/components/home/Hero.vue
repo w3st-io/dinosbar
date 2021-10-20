@@ -1,16 +1,90 @@
 <template>
 	<div>
-		<VueTinySlider v-bind="options" class="slider">
-			<div>
-				<img :src="slides[0].img" class="w-100">
+		<div class="img-holder">
+			<VueTinySlider v-bind="options" class="slider">
+				<div class="slide">
+					<div class="img-holder">
+						<img
+							:src="slides[0].img"
+							class="w-100"
+							v-rellax
+							data-rellax-xs-speed="0"
+							data-rellax-mobile-speed="0"
+							data-rellax-tablet-speed="0"
+							:data-rellax-desktop-speed="rellaxNumber"
+						>
+
+						<div class="img-center">
+							<div>
+								<h1
+									class="m-0 p-3 font-weight-light text-light border border-light"
+									style="
+										font-size: 7em;
+										border-width: 10px !important;
+									"
+								>DINO'S BAR & GRILL</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="slide">
+					<div class="img-holder">
+						<img
+							:src="slides[1].img"
+							class="w-100"
+							v-rellax
+							data-rellax-xs-speed="0"
+							data-rellax-mobile-speed="0"
+							data-rellax-tablet-speed="0"
+							:data-rellax-desktop-speed="rellaxNumber"
+						>
+
+						<div class="img-center">
+							<div>
+								<h1
+									class="m-0 p-3 font-weight-light text-light border border-light"
+									style="
+										font-size: 7em;
+										border-width: 10px !important;
+									"
+								>GREAT FOOD</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slide">
+					<div class="img-holder">
+						<img
+							:src="slides[2].img"
+							class="w-100"
+							v-rellax
+							data-rellax-xs-speed="0"
+							data-rellax-mobile-speed="0"
+							data-rellax-tablet-speed="0"
+							:data-rellax-desktop-speed="rellaxNumber"
+						>
+
+						<div class="img-center">
+							<div>
+								<h1
+									class="m-0 p-3 font-weight-light text-light border border-light"
+									style="
+										font-size: 7em;
+										border-width: 10px !important;
+									"
+								>SPORTS & MUSIC</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</VueTinySlider>
+
+			<div class="img-center">
+			
 			</div>
-			<div>
-				<img :src="slides[1].img" class="w-100">
-			</div>
-			<div>
-				<img :src="slides[2].img" class="w-100">
-			</div>
-		</VueTinySlider>
+		</div>
 	</div>
 </template>
 
@@ -31,7 +105,7 @@
 
 			rellaxNumber: {
 				type: Number,
-				default: 0,
+				default: -8,
 			},
 		},
 
@@ -53,6 +127,7 @@
 					autoplayButtonOutput: false,
 					items: 1,
 					autoplayTimeout: 3000,
+					speed: 1000,
 				}
 			}
 		},
@@ -76,14 +151,24 @@
 </script>
 
 <style lang="scss" scoped>
-	.content {
-		background: rgba(0, 0, 0, 0.30);
-	}
-
 	.slider {
-		div {
+		> .slide {
 			max-height: 100vh;
 			overflow: hidden;
 		}
+	}
+
+	.img-holder {
+		position: relative;
+		text-align: center;
+	}
+
+	.img-center {
+		background-color: rgba(0, 0, 0, 0.4);
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	
 	}
 </style>
