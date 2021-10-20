@@ -22,7 +22,11 @@ export default new Vuex.Store({
 		adminLogged: false,
 		admin_decoded: {},
 
-		isHomePage: false
+		isHomePage: false,
+
+		window: {
+			innerWidth: window.innerWidth
+		},
 	},
 
 	// Syncrous //

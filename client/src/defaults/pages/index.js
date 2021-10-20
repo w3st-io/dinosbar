@@ -6,17 +6,17 @@ module.exports = {
 	caraousel: [
 		{
 			caption:'',
-			text: '',
+			text: 'DINO\'S BAR & GRILL',
 			img: require('../../assets/images/pages/index/hero1.jpg'),
 		},
 		{
 			caption:'',
-			text: '',
+			text: 'GREAT FOOD',
 			img: require('../../assets/images/pages/index/hero2.jpg'),
 		},
 		{
 			caption: '',
-			text: '',
+			text: 'SPORTS & MUSIC',
 			img: require('../../assets/images/pages/index/hero3.jpg'),
 		},
 	],

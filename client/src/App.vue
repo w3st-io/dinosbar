@@ -22,15 +22,28 @@
 		components: {
 			NavBar,
 			Footer,
-		}
+		},
+
+		methods: {
+			onResize() {
+				this.$store.state.window.innerWidth = window.innerWidth
+			},
+		},
+
+		mounted() {
+			this.$nextTick(() => {
+				window.addEventListener('resize', this.onResize)
+			})
+		},
+
+		beforeDestroy() { 
+			window.removeEventListener('resize', this.onResize)
+		},
 	}
 </script>
 
 <style lang="scss">
 	// [IMPORT] // heading // * //
-	@import url('https://fonts.googleapis.com/css2?family=Balthazar&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 	* { font-family: 'Oswald', sans-serif !important; }

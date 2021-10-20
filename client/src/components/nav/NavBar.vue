@@ -1,13 +1,12 @@
 <template>
 	<div
 		class="w-100 fixed-top transition"
-		:class="[navClass, { 'bg-black': !$store.state.isHomePage }]"
+		:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
 	>
 
 		<div class="logo-holder-holder">
-			<div class="text-center bg-primary logo-holder" style="z-index: 99;">
-				<h1 class="m-0 p-0 title text-light">DINO'S</h1>
-				<h6 class="m-0 pb-3 caption text-dark">Bar & Grill</h6>
+			<div class="text-center bg-white logo-holder" style="z-index: 99;">
+				<img :src="require('../../assets/images/dinos-logo.png')" alt="" class="w-100">
 			</div>
 		</div>
 
@@ -104,7 +103,7 @@
 
 			handleScroll() {
 				if (window.scrollY > 0) {
-					this.navClass = 'bg-black'
+					this.navClass = 'bg-shade'
 					this.titleClass = 'text-white'
 				}
 				else {
