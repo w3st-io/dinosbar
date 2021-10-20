@@ -12,9 +12,11 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						:data-rellax-desktop-speed="rellaxNumber"
+						:data-rellax-desktop-speed="
+							$store.state.window.innerWidth > 1366 ? -9 : -3
+						"
 					>
-
+					
 					<!-- Slide Content Center -->
 					<div class="slide-center">
 						<div class="shadow bg-shade center-float">
@@ -28,7 +30,7 @@
 									border border-light
 									slide-text
 								"
-							>{{ s.text }}</h1>
+							>{{ s.text }} {{ $store.state.window.innerWidth }}</h1>
 						</div>
 					</div>
 				</div>
