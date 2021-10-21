@@ -1,15 +1,30 @@
 <template>
 	<div class="text-center">
-		<a :href="defaultData.facebookLink" :class="`text-${variant}`">
-			<FacebookIcon :stroke-width="strokeWidth" :size="size" class="mr-3" />
+		<a
+			v-if="defaultData.facebookLink != ''"
+			:href="defaultData.facebookLink"
+			target="_blank"
+			:class="`text-${variant}`"
+		>
+			<FacebookIcon :stroke-width="strokeWidth" :size="size" class="mx-2" />
 		</a>
 
-		<a :href="defaultData.instagramLink" :class="`text-${variant}`">
-			<InstagramIcon :stroke-width="strokeWidth" :size="size" class="mr-3" />
+		<a
+			v-if="defaultData.instagramLink != ''"
+			:href="defaultData.instagramLink"
+			target="_blank"
+			:class="`text-${variant}`"
+		>
+			<InstagramIcon :stroke-width="strokeWidth" :size="size" class="mx-2" />
 		</a>
 
-		<a :href="defaultData.youtubeLink" :class="`text-${variant}`">
-			<YoutubeIcon :stroke-width="strokeWidth" :size="size" class="" />
+		<a
+			v-if="defaultData.youtubeLink != ''"
+			:href="defaultData.youtubeLink"
+			target="_blank"
+			:class="`text-${variant}`"
+		>
+			<YoutubeIcon :stroke-width="strokeWidth" :size="size" class="mx-2" />
 		</a>
 	</div>
 </template>

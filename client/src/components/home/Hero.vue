@@ -39,6 +39,8 @@
 
 		<!-- PUT IN CENTER OF SLIDER -->
 		<div class="slider-center">
+			<SocialMediaPlug size="3x" class="my-3" />
+
 			<BButton variant="dark" size="lg" class="">
 				<h3 class="m-0">
 					<MapPinIcon size="1x" />
@@ -50,8 +52,12 @@
 </template>
 
 <script>
+	// [PERSONAL] //
 	import { MapPinIcon } from 'vue-feather-icons'
 	import VueTinySlider from 'vue-tiny-slider'
+
+	// [IMPORT] Personal //
+	import SocialMediaPlug from '../SocialMediaPlug'
 
 	export default {
 		props: {
@@ -92,6 +98,7 @@
 		components: {
 			MapPinIcon,
 			VueTinySlider,
+			SocialMediaPlug,
 		},
 	}
 </script>

@@ -25,9 +25,9 @@ module.exports = {
 	phoneNumber: '(201) 224-6992',
 	phoneNumberLink: 'tel:201-224-6992',
 
-	facebookLink: 'https://www.facebook.com/',
-	instagramLink: 'https://www.instagram.com/',
-	youtubeLink: 'https://www.youtube.com/',
+	facebookLink: 'https://www.facebook.com/dinosbarandgrillnj/',
+	instagramLink: 'https://www.instagram.com/dinos_nj',
+	youtubeLink: '',
 
 	aboutHTML: `
 		Dino's Bar & Grill is Edgewater, NJ's family owned and operated friendly neighboorhood bar. Featuring traditional American pub fare and daily specials on the menu, Dino's has 8 TV's, pool table, darts and vintage bar games, with a variety of popular beers on tap, wine & cocktails.
