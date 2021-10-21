@@ -20,7 +20,7 @@
 							</h6>
 							<br>
 							<p
-								v-html="pageData.bodyDetails.row0.aboutCompanyHTML"
+								v-html="pageData.companyInfo.aboutHTML"
 								class="mb-4 h5 text-dark"
 								data-aos="fade-up"
 							></p>
