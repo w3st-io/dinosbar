@@ -25,7 +25,7 @@
 							v-for="(hoo, index) in companyInfo.hoursOfOperation"
 							:key="index"
 						>
-							<span class="text-secondary">{{ hoo.days }}:</span>
+							<span class="text-primary">{{ hoo.days }}:</span>
 							{{ hoo.hours }}
 						</li>
 					</ul>

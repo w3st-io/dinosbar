@@ -33,7 +33,7 @@
 									</a>
 									<span>{{ item.costString }}</span>
 								</h4>
-                                <p class="text-dark">{{ item.description }}i</p>
+                                <p class="text-info">{{ item.description }}i</p>
                             </div>
                         </div>
                     </BCol>

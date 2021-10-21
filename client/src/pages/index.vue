@@ -55,6 +55,15 @@
 			</BContainer>
 		</BContainer>
 
+
+		<iframe
+			:src="pageData.companyInfo.googleMapsEmbedLink"
+			width="100%"
+			height="450"
+			style="border: 0;"
+			loading="lazy"
+		></iframe>
+
 		<!-- INTERESTED? -->
 		<BContainer fluid class="px-0 py-3 bg-secondary">
 			<BRow class="w-100 m-0 p-0">
