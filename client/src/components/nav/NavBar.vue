@@ -1,11 +1,12 @@
 <template>
 	<div class="w-100 fixed-top">
+		<!-- Desktop Menu -->
 		<div
 			class="d-none d-lg-flex w-100 transition"
-			:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
+			:class="[navClass, { 'bg-dark': !$store.state.isHomePage }]"
 		>
 			<div class="ml-auto">
-				<RouterLink to="/" class="">
+				<RouterLink to="/">
 					<BButton
 						variant="none"
 						class="mx-3 py-3 text-light menu-link"
@@ -14,7 +15,7 @@
 					>HOME</BButton>
 				</RouterLink>
 
-				<RouterLink to="/menu" class="text-light">
+				<RouterLink to="/menu">
 					<BButton
 						variant="none"
 						class="mx-3 py-3 text-light menu-link"
@@ -24,8 +25,8 @@
 				</RouterLink>
 			</div>
 
-			<div class="text-center" style="width: 350px;">
-				<img :src="require('../../assets/images/dinos-dark.png')" alt="" class="w-100">
+			<div class="w-100" style="max-width: 350px;">
+				<img :src="require('../../assets/images/dinos-dark.png')" class="w-100">
 			</div>
 
 			<div class="mr-auto">
@@ -49,12 +50,13 @@
 			</div>
 		</div>
 
+		<!-- Mobile Menu -->
 		<div
 			class="d-flex d-lg-none m-0 p-0 text-right"
 			:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
 		>
 			<div class="text-center w-100 py-3" style="max-width: 150px;">
-				<img :src="require('../../assets/images/dinos-dark.png')" alt="" class="w-100">
+				<img :src="require('../../assets/images/dinos-dark.png')" class="w-100">
 			</div>
 
 			<!-- [HIDDEN] Menu Button -->

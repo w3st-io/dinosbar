@@ -1,6 +1,6 @@
 <template>
-	<BContainer v-if="menuItems != []" class="my-5">
-		<BCard bg-variant="light" class="mt-3 shadow">
+	<BContainer v-if="menuItems != []" class="py-5">
+		<BCard bg-variant="light" class="mt-3">
 			<BRow>
 				<!-- Title -->
 				<BCol cols="12">
