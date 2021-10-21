@@ -69,7 +69,7 @@
 				<BCol cols="12" md="8" class="m-auto">
 					<BRow>
 						<BCol cols="12">
-							<h1 class="my-5 text-center text-light">
+							<h1 class="my-5 text-center text-white">
 								Some Services We Provide
 							</h1>
 						</BCol>

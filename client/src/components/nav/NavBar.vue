@@ -9,7 +9,7 @@
 				<RouterLink to="/">
 					<BButton
 						variant="none"
-						class="mx-3 py-3 text-light menu-link"
+						class="mx-3 py-3 text-white menu-link"
 						:class="titleClass"
 						style="width: 100px;"
 					>HOME</BButton>
@@ -18,7 +18,7 @@
 				<RouterLink to="/menu">
 					<BButton
 						variant="none"
-						class="mx-3 py-3 text-light menu-link"
+						class="mx-3 py-3 text-white menu-link"
 						:class="titleClass"
 						style="width: 100px;"
 					>MENU</BButton>
@@ -33,7 +33,7 @@
 				<RouterLink to="/contact" class="">
 					<BButton
 						variant="none"
-						class="mx-3 py-3 text-light menu-link"
+						class="mx-3 py-3 text-white menu-link"
 						:class="titleClass"
 						style="width: 100px;"
 					>CONTACT</BButton>
@@ -42,7 +42,7 @@
 				<RouterLink to="/about" class="">
 					<BButton
 						variant="none"
-						class="mx-3 py-3 text-light menu-link"
+						class="mx-3 py-3 text-white menu-link"
 						:class="titleClass"
 						style="width: 100px;"
 					>ABOUT</BButton>
@@ -62,7 +62,7 @@
 			<!-- [HIDDEN] Menu Button -->
 			<BButton
 				variant="none"
-				class="ml-auto px-5 text-light"
+				class="ml-auto px-5 text-white"
 				@click="toggle()"
 			><MenuIcon size="3x" /></BButton>
 		</div>

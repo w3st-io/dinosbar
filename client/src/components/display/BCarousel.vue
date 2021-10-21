@@ -34,7 +34,7 @@
 				<!-- isHero -->
 				<div v-if="showContent" class="h-100 my-auto py-2 rounded">
 					<h1
-						class="title d-none d-md-block font-weight-light text-light hero-text"
+						class="title d-none d-md-block font-weight-light text-white hero-text"
 						style="font-size: 4em;"
 					>
 						{{ mainText }}
@@ -48,7 +48,7 @@
 							d-sm-block
 							d-md-none
 							font-weight-light
-							text-light
+							text-white
 							hero-text
 						"
 					>
@@ -56,7 +56,7 @@
 						<br><br>
 					</h3>
 
-					<h5 class="title d-block d-sm-none font-weight-light text-light">
+					<h5 class="title d-block d-sm-none font-weight-light text-white">
 						{{ mainText }}
 					</h5>
 
@@ -74,7 +74,7 @@
 						>Book Apointment</BButton>
 					</RouterLink>
 
-					<div class="title d-none d-md-block font-weight-bold text-light">
+					<div class="title d-none d-md-block font-weight-bold text-white">
 						<br><br><br>
 					</div>
 				</div>

@@ -9,7 +9,7 @@
 			<div v-for="(qa, index) in pageData.faq" :key="index">
 				<BListGroup class="mb-3">
 					<BListGroupItem
-						variant="white"
+						variant="light"
 						class="d-flex justify-content-between align-items-center q"
 						@click="toggler(index)"
 					>

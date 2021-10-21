@@ -49,7 +49,7 @@
 							>Hours</h3>
 							<ul
 								v-if="companyInfo.hoursOfOperation > 0"
-								class="list-unstyled text-small text-light"
+								class="list-unstyled text-small text-white"
 							>
 								<li
 									v-for="(hoo, i) in companyInfo.hoursOfOperation"

@@ -26,8 +26,8 @@
 									m-0
 									p-3
 									font-weight-light
-									text-light
-									border border-light
+									text-white
+									border border-white
 									slide-text
 								"
 							>{{ s.text }}</h1>

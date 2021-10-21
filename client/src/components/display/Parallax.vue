@@ -10,7 +10,7 @@
 		>
 			<h1
 				v-if="text"
-				class="my-auto text-center text-light nav-spacer"
+				class="my-auto text-center text-white nav-spacer"
 				style="font-size: 4em;"
 			>{{ text }}</h1>
 		</div>

@@ -3,7 +3,7 @@
 		<BRow v-if="product">
 			<!-- Your Order -->
 			<BCol cols="12" md="5" class="mb-3">
-				<BCard variant="white">
+				<BCard variant="light">
 					<h2 class="text-center text-primary">Your Order</h2>
 					<p class="h4">Type: {{ product.type }}</p>
 					<p class="h4">Service: {{ product.name }}</p>
@@ -18,7 +18,7 @@
 
 			<!-- Check Out -->
 			<BCol cols="12" md="7" class="mb-3">
-				<BCard variant="white">
+				<BCard variant="light">
 					<h2 class="text-center text-primary">Check Out</h2>
 
 					<!-- Email -->
@@ -57,7 +57,7 @@
 
 		<BRow v-else>
 			<BCol cols="12">
-				<BCard variant="white">
+				<BCard variant="light">
 					<h1 class="text-center">Product Not Found</h1>
 				</BCard>
 			</BCol>

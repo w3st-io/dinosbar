@@ -2,7 +2,7 @@
 	<BContainer class="my-5">
 		<BRow>
 			<BCol cols="12">
-				<BCard variant="white" class="shadow">
+				<BCard variant="light" class="shadow">
 					<h1 class="m-0 text-center text-primary">404 Not Found</h1>
 				</BCard>
 			</BCol>

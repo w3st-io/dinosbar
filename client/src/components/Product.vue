@@ -85,7 +85,7 @@
 						variant="primary"
 						class="
 							text-center
-							border-light
+							border-white
 							border-bottom
 							border-top-0
 							border-left-0

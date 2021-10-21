@@ -8,7 +8,7 @@
 			<BButton
 				v-show="$store.state.showMenu"
 				variant="secondary"
-				class="w-100 mb-2 p-4 text-light"
+				class="w-100 mb-2 p-4 text-white"
 				@click="closeMenu()"
 			><XIcon size="36" /></BButton>
 

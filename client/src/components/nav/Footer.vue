@@ -4,23 +4,23 @@
 			<BRow class="pt-4">
 				<BCol cols="12" class="text-center" data-aos="fade">
 					<RouterLink to="/" class="text-decoration-none">
-						<h5 class="m-0 text-light">
+						<h4 class="m-0 text-primary">
 							{{ companyInfo.companyName }}
-						</h5>
-						<h6 v-html="companyInfo.companyCaption1" class="text-secondary">
+						</h4>
+						<h6 v-html="companyInfo.companyCaption1" class="text-light small">
 						</h6>
 						<hr>
 					</RouterLink>
 				</BCol>
 
 				<BCol cols="12" sm="4" class="text-center text-sm-left" data-aos="fade-up">
-					<h4 class="text-secondary">Location</h4>
-					<a :href="companyInfo.googleMapsLink" class="mb-3 text-light">
+					<h4 class="text-primary">Location</h4>
+					<a :href="companyInfo.googleMapsLink" class="mb-3 text-white">
 						<h5 class="mb-4">{{ companyInfo.address }}</h5>
 					</a>
 
-					<h4 class="text-secondary">Hours</h4>
-					<ul class="list-unstyled text-small text-light">
+					<h4 class="text-primary">Hours</h4>
+					<ul class="list-unstyled text-small text-white">
 						<li
 							v-for="(hoo, index) in companyInfo.hoursOfOperation"
 							:key="index"
@@ -33,10 +33,10 @@
 				</BCol>
 
 				<BCol cols="12" sm="4" class="text-center" data-aos="fade-up">
-					<h4>Check Us Out</h4>
+					<h4 class="text-primary">Check Us Out</h4>
 					<ul class="list-unstyled text-small">
 						<li v-for="(link, i) in pageLinks" :key="i">
-							<RouterLink to="/services" class="text-light">
+							<RouterLink to="/services" class="text-white">
 								<span v-if="link.text">{{ link.text }}</span>
 								<span v-else v-html="link.navIcon"></span>
 							</RouterLink>
@@ -46,13 +46,15 @@
 				</BCol>
 
 				<BCol cols="12" sm="4" class="text-center" data-aos="fade-up">
-					<h4>Follow Us</h4>
+					<h4 class="text-primary">Follow Us</h4>
 					<SocialMediaPlug variant="light" />
 				</BCol>
 
-				<BCol cols="12" class="my-3 text-center text-secondary">
-					<h6>
-						<a href="https://www.w3st.io" target="_blank">© w3st.io {{ new Date().getFullYear() }}</a>
+				<BCol cols="12" class="my-3 text-center">
+					<h6 class="">
+						<a href="https://www.w3st.io" target="_blank" class="text-secondary">
+						© w3st.io {{ new Date().getFullYear() }}
+						</a>
 					</h6>
 					<br><br><br><br><br>
 				</BCol>

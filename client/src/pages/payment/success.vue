@@ -2,7 +2,7 @@
 	<BContainer class="my-3">
 		<BRow>
 			<BCol cols="12">
-				<BCard variant="white" class="m-auto" style="max-width: 600px;">
+				<BCard variant="light" class="m-auto" style="max-width: 600px;">
 					<h1 class="text-center text-success">
 						Payment Successfull
 					</h1>
