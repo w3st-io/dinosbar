@@ -1,20 +1,10 @@
 <template>
 	<div class="w-100 fixed-top">
-		<div class="logo-holder-holder">
-			<div
-				class="text-center logo-holder transition"
-				:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
-				style="z-index: 99;"
-			>
-				<img :src="require('../../assets/images/dinos-dark.png')" alt="" class="w-100">
-			</div>
-		</div>
-
-		<div class="d-none d-lg-flex w-100">
-			<div
-				class="ml-auto text-right menu-section transition"
-				:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
-			>
+		<div
+			class="d-none d-lg-flex w-100 transition"
+			:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
+		>
+			<div class="ml-auto">
 				<RouterLink to="/" class="">
 					<BButton
 						variant="none"
@@ -35,13 +25,10 @@
 			</div>
 
 			<div class="text-center" style="width: 350px;">
-				
+				<img :src="require('../../assets/images/dinos-dark.png')" alt="" class="w-100">
 			</div>
 
-			<div
-				class="mr-auto text-left menu-section transition"
-				:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
-			>
+			<div class="mr-auto">
 				<RouterLink to="/contact" class="">
 					<BButton
 						variant="none"
@@ -62,14 +49,21 @@
 			</div>
 		</div>
 
-		<BContainer fluid class="d-block d-lg-none m-0 p-0 bg-black text-right">
+		<div
+			class="d-flex d-lg-none m-0 p-0 text-right"
+			:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
+		>
+			<div class="text-center w-100 py-3" style="max-width: 150px;">
+				<img :src="require('../../assets/images/dinos-dark.png')" alt="" class="w-100">
+			</div>
+
 			<!-- [HIDDEN] Menu Button -->
 			<BButton
-				variant="secondary"
-				class="px-5"
+				variant="none"
+				class="ml-auto px-5 text-light"
 				@click="toggle()"
 			><MenuIcon size="3x" /></BButton>
-		</BContainer>
+		</div>
 
 		<!-- Hidden Side Menu -->
 		<SideMenu />
@@ -134,30 +128,6 @@
 
 	.nav {
 		z-index: 100;
-	}
-
-	.logo-holder-holder {
-		position: absolute;
-		left: calc(50% - 175px);
-
-		@media (max-width: 768px) {
-			left: 0;
-		}
-	}
-
-	.logo-holder {
-		position: relative;
-		width: 350px;
-
-		.title { font-size: 4em; }
-		.caption { font-size: 2em; }
-
-		@media (max-width: 768px) {
-			width: 200px;
-
-			.title { font-size: 3em; }
-			.caption { font-size: 1em; }
-		}
 	}
 
 	.menu-link {

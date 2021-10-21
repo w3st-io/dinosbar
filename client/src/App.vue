@@ -3,7 +3,7 @@
 		<!-- UI -->
 		<NavBar />
 
-		<div v-if="!$store.state.isHomePage" style="height: 58px;" />
+		<div v-if="!$store.state.isHomePage" style="height: 128px;" />
 
 		<!-- RouterView -->
 		<RouterView />
