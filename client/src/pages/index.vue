@@ -48,57 +48,35 @@
 			</BContainer>
 		</BContainer>
 
-		<!-- About Dinos Bar & Grill -->
+		<!-- MENU -->
 		<BContainer fluid class="bg-white">
 			<BContainer class="py-5">
 				<Menu class="my-5" />
 			</BContainer>
 		</BContainer>
 
-		<!-- MENU -->
-		<BRow class="m-0 p-0">
-			<BCol cols="12" lg="4" order-lg="1" class="text-light bg-dark">
-				<div class="p-xl-5">
-					<div class="p-xl-5">
-						<div class="p-lg-3 text-center">
-							<div class="px-2 py-5 px-lg-0 py-lg-0">
-								<h1 class="mb-4">Our Location</h1>
-								<h3 class="mb-4">
-									{{ pageData.companyInfo.address }}
-								</h3>
+		<!-- REVIEWS -->
+		<Reviews />
 
-								<BButton variant="light" size="lg">
-									<h4 class="m-0">
-										<MapPinIcon size="1x" variant="dark" />
-										GOOGLE MAPS
-									</h4>
-								</BButton>
-							</div>
-						</div>
-					</div>
-				</div>
-			</BCol>
+		<!-- FOOD IMAGES -->
+		<FoodImages />
 
-			<BCol cols="12" lg="8" order-lg="0" class="m-0 p-0">
-				<iframe
-					:src="pageData.companyInfo.googleMapsEmbedLink"
-					width="100%"
-					height="100%"
-					style="border: 0; min-height: 400px;"
-					loading="lazy"
-				></iframe>
-			</BCol>			
-		</BRow>
+		<!-- MAP AND LOCATION -->
+		<MapAndLocation />
+
+		<!-- INFO -->
+		<ContactInfo />
 	</div>
 </template>
 
 <script>
-	// [IMPORT] //
-	import { MapPinIcon } from 'vue-feather-icons'
-
 	// [IMPORT] Personal //
+	import ContactInfo from '../components/home/ContactInfo'
+	import FoodImages from '../components/home/FoodImages'
 	import Hero from '../components/home/Hero'
+	import MapAndLocation from '../components/home/MapAndLocation'
 	import Menu from '../components/home/Menu'
+	import Reviews from '../components/home/Reviews'
 	import PageService from '../services/PageService'
 	import pageData from '@/defaults/pages'
 	import router from '@/router'
@@ -107,9 +85,12 @@
 		name: 'Home',
 
 		components: {
-			MapPinIcon,
+			ContactInfo,
+			FoodImages,
 			Hero,
+			MapAndLocation,
 			Menu,
+			Reviews,
 		},
 
 		data() {

@@ -22,6 +22,9 @@ module.exports = {
 		},
 	],
 
+	email: 'dinosbarandgrill@gmail.com',
+	emailLink: 'mailto:dinosbarandgrill@gmail.com',
+	
 	phoneNumber: '(201) 224-6992',
 	phoneNumberLink: 'tel:201-224-6992',
 
@@ -35,7 +38,5 @@ module.exports = {
 		Open until 3:00AM everyday, Dino's is your home away from home.
 	`,
 
-	messageHTML: `
-		
-	`
+	messageHTML: ``
 }
