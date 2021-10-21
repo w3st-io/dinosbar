@@ -39,12 +39,18 @@
 
 		<!-- PUT IN CENTER OF SLIDER -->
 		<div class="slider-center">
-			<BButton variant="light" size="lg">DIRECTIONS!</BButton>
+			<BButton variant="dark" size="lg" class="">
+				<h3 class="m-0">
+					<MapPinIcon size="1x" />
+					DIRECTIONS
+				</h3>
+			</BButton>
 		</div>
 	</div>
 </template>
 
 <script>
+	import { MapPinIcon } from 'vue-feather-icons'
 	import VueTinySlider from 'vue-tiny-slider'
 
 	export default {
@@ -84,7 +90,8 @@
 		},
 
 		components: {
-			VueTinySlider
+			MapPinIcon,
+			VueTinySlider,
 		},
 	}
 </script>
