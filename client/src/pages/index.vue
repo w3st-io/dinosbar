@@ -55,133 +55,47 @@
 			</BContainer>
 		</BContainer>
 
+		<!-- MENU -->
+		<BRow class="m-0 p-0">
+			<BCol cols="12" lg="4" order-lg="1" class="text-light bg-dark">
+				<div class="p-xl-5">
+					<div class="p-xl-5">
+						<div class="p-lg-3 text-center">
+							<div class="px-2 py-5 px-lg-0 py-lg-0">
+								<h1 class="mb-4">Our Location</h1>
+								<h3 class="mb-4">
+									{{ pageData.companyInfo.address }}
+								</h3>
 
-		<iframe
-			:src="pageData.companyInfo.googleMapsEmbedLink"
-			width="100%"
-			height="450"
-			style="border: 0;"
-			loading="lazy"
-		></iframe>
-
-		<!-- INTERESTED? -->
-		<BContainer fluid class="px-0 py-3 bg-secondary">
-			<BRow class="w-100 m-0 p-0">
-				<BCol cols="12" md="2" class="d-none d-md-block p-0 text-left">
-					<img
-						src="https://images2.imgbox.com/c3/c3/XQ36FnwY_o.png"
-						class="w-100 mt-5"
-						style="max-width: 200px;"
-					>
-				</BCol>
-
-				<BCol cols="12" md="8" class="m-auto">
-					<BRow>
-						<BCol cols="12">
-							<h1 class="my-5 text-center text-white">
-								Some Services We Provide
-							</h1>
-						</BCol>
-
-						<BCol cols="12" md="6" class="d-flex align-items-stretch">
-							<BCard
-								bg-variant="secondary"
-								text-variant="light"
-								border-variant="muted"
-								no-body
-								tag="article"
-								class="mb-5"
-							>
-								<div style="max-height: 200px; overflow:hidden;">
-									<BCardImg
-										:src="services[0].image"
-										class="w-100 rounded-top"
-									></BCardImg>
-								</div>
-
-								<BCardHeader>
-									<h3 class="m-0 text-center">
-										{{ services[0].title }}
-									</h3>
-								</BCardHeader>
-
-								<BCardBody>{{ services[0].description }}</BCardBody>
-
-								<BCardFooter class="">
-									<RouterLink :to="`/services/${services[0].id}`">
-										<BButton
-											variant="outline-light"
-											size="lg"
-											class="w-100 my-3"
-										>Read More</BButton>
-									</RouterLink>
-								</BCardFooter>
-							</BCard>
-						</BCol>
-
-						<BCol cols="12" md="6" class="d-flex align-items-stretch">
-							<BCard
-								bg-variant="secondary"
-								text-variant="light"
-								border-variant="muted"
-								no-body
-								tag="article"
-								class="mb-5"
-							>
-								<div style="max-height: 200px; overflow:hidden;">
-									<BCardImg
-										:src="services[1].image"
-										class="w-100 rounded-top"
-									></BCardImg>
-								</div>
-
-								<BCardHeader class="">
-									<h3 class="m-0 text-center">
-										{{ services[1].title }}
-									</h3>
-								</BCardHeader>
-
-								<BCardBody>{{ services[1].description }}</BCardBody>
-
-								<BCardFooter class="">
-									<RouterLink :to="`/services/${services[1].id}`">
-										<BButton
-											variant="outline-light"
-											size="lg"
-											class="w-100 my-3"
-										>Read More</BButton>
-									</RouterLink>
-								</BCardFooter>
-							</BCard>
-						</BCol>
-
-						<BCol cols="12">
-							<div class="text-center">
-								<RouterLink to="/services">
-									<BButton
-										size="lg"
-										variant="light"
-										class="mb-5 shadow"
-									>Check Out All of Our Services</BButton>
-								</RouterLink>
+								<BButton variant="light" size="lg">
+									<h4 class="m-0">
+										<MapPinIcon size="1x" variant="dark" />
+										GOOGLE MAPS
+									</h4>
+								</BButton>
 							</div>
-						</BCol>
-					</BRow>
-				</BCol>
+						</div>
+					</div>
+				</div>
+			</BCol>
 
-				<BCol cols="12" md="2" class="p-0 text-right">
-					<img
-						src="https://images2.imgbox.com/11/93/PmJs689J_o.png"
-						class="w-100 mt-5"
-						style="max-width: 200px;"
-					>
-				</BCol>
-			</BRow>
-		</BContainer>
+			<BCol cols="12" lg="8" order-lg="0" class="m-0 p-0">
+				<iframe
+					:src="pageData.companyInfo.googleMapsEmbedLink"
+					width="100%"
+					height="100%"
+					style="border: 0; min-height: 400px;"
+					loading="lazy"
+				></iframe>
+			</BCol>			
+		</BRow>
 	</div>
 </template>
 
 <script>
+	// [IMPORT] //
+	import { MapPinIcon } from 'vue-feather-icons'
+
 	// [IMPORT] Personal //
 	import Hero from '../components/home/Hero'
 	import Menu from '../components/home/Menu'
@@ -193,6 +107,7 @@
 		name: 'Home',
 
 		components: {
+			MapPinIcon,
 			Hero,
 			Menu,
 		},

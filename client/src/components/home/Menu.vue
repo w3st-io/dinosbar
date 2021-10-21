@@ -1,47 +1,45 @@
 <template>
-	<div>
-		<section id="menu">
-            <div class="space-70"></div>
-            <div class="container">
-                <div class="text-center">
-                    <h1 class="title-1">Our Menu</h1>
-                    <h5 class="subtitle"></h5>
-                    <div class="space-30"></div>
-                </div>
-                <ul class="menu-filter-list list-inline text-center">
-                    <li class="is-checked" data-filter="*">All</li>
-                    <li data-filter=".start">Appetizers</li>
-                    <li data-filter=".lunch">Salads</li>
-                    <li data-filter=".dinner">Entrees</li>
-                </ul>
+	<section id="menu">
+		<div class="text-center">
+			<h1 class="title-1">Our Menu</h1>
+			<h5 class="subtitle"></h5>
+			<div class="space-30"></div>
+		</div>
+		<ul class="menu-filter-list list-inline text-center">
+			<li class="is-checked" data-filter="*">All</li>
+			<li data-filter=".start">Appetizers</li>
+			<li data-filter=".lunch">Salads</li>
+			<li data-filter=".dinner">Entrees</li>
+		</ul>
 
-                <BRow class="menu-filter-items">
-                    <BCol
-						v-for="(item, i) in menu" :key="i"
-						col="12" md="4"
-						class="start margin-b-30 menu-item"
-					>
-                        <div class="menu-box clearfix">
-                            <div class="thumb">
-                                <img :src="item.img || placeholderImg" width="70">
-                            </div>
+		<BRow class="menu-filter-items">
+			<BCol
+				v-for="(item, i) in menu" :key="i"
+				cols="12" sm="12" md="4"
+				class="start menu-item"
+			>
+				<div class="menu-box clearfix">
+					<div class="thumb">
+						<img
+							:src="item.img || placeholderImg"
+							width="70"
+							class="d-none d-sm-block"
+						>
+					</div>
 
-                            <div class="menu-content">
-                                <h4 class="text-primary">
-									<a href="#" class="text-primary">
-										{{ item.name }}
-									</a>
-									<span>{{ item.costString }}</span>
-								</h4>
-                                <p class="text-info">{{ item.description }}i</p>
-                            </div>
-                        </div>
-                    </BCol>
-                </BRow>
-            </div>
-        </section>
-        <!--end menu-->
-	</div>
+					<div class="menu-content">
+						<h4 class="text-primary">
+							<a href="#" class="text-primary">
+								{{ item.name }}
+							</a>
+							<span>{{ item.costString }}</span>
+						</h4>
+						<p class="text-info">{{ item.description }}</p>
+					</div>
+				</div>
+			</BCol>
+		</BRow>
+	</section>
 </template>
 
 <script>
