@@ -52,7 +52,6 @@
 	import Reviews from '@/components/home/Reviews'
 	import pageData from '@/defaults/pages'
 	import router from '@/router'
-	import PageService from '@/services/PageService'
 
 	export default {
 		name: 'Home',
@@ -80,25 +79,13 @@
 		},
 
 		methods: {
-			async getPageData() {
-				this.reqData = await PageService.s_()
-
-				if (this.reqData.status) {
-					this.reikiTitle = this.reqData.reikiTitle
-					this.reikiDescription = this.reqData.reikiDescription
-					this.services = this.reqData.services
-				}
-
-				this.loading = false
-			},
-
 			redirectCompanyInfo() { router.push({ name: 'book' }) },
 		},
 
 		async created() {
 			this.$store.state.isHomePage = true
 
-			await this.getPageData()
+			this.loading = false			
 		},
 
 		destroyed() {

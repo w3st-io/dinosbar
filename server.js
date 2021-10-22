@@ -46,16 +46,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 
 
-// [USE] Personal // API // Pages //
-app.use('/api/payments', Functionality.paymentsSystem(), a_payments)
-
-app.use('/pages', p_)
-app.use('/pages/about', p_about)
-app.use('/pages/menu', p_menu)
-app.use('/pages/payments', p_payments)
-app.use('/pages/services', p_services)
-
-
 // [HEROKU] Set Static Folder for Heroku //
 if (process.env.NODE_ENV == 'production') {
 	app.use(express.static('client/dist'))
