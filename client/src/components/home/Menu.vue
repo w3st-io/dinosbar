@@ -32,16 +32,65 @@
 
 					<div class="menu-content">
 						<h4 class="text-primary">
-							<a href="#" class="text-primary">
+							<a @click="viewProduct(i)" class="text-primary">
 								{{ item.name }}
 							</a>
 							<span>{{ item.costString }}</span>
 						</h4>
-						<p class="text-info">{{ item.description }}</p>
+						<p class="text-info">
+							{{
+								item.description.length > 100 ?
+									item.description.substring(0, 100 - 3) + '...' :
+									item.description
+							}}
+						</p>
 					</div>
 				</div>
 			</BCol>
 		</BRow>
+
+		<div v-if="viewingProduct" class="overlay w-100 h-100 position-fixed">
+			<div class="overlay-content w-100 px-2 position-relative text-center">
+				<BCard
+					no-body
+					bg-variant="light"
+					text-variant="dark"
+					class="m-auto h-100 text-center"
+					style="max-width: 500px;"
+				>
+					<BCardHeader>
+						<BButton
+							size="sm"
+							variant="primary"
+							class="my-2 float-right"
+							pill
+							@click="viewingProduct = false"
+						>✖</BButton>
+					</BCardHeader>
+
+					<BCardBody style="overflow-y: auto;">
+						<BRow>
+							<BCol cols="12" class="text-center">
+								<h6 class="font-weight-bold text-primary">
+									{{ filteredMenu[viewingProductNumber].name }}
+								</h6>
+								<img
+									:src="filteredMenu[viewingProductNumber].img || placeholderImg"
+									class="w-100 mx-auto my-3"
+									style="max-width: 350px;"
+								>
+								<h5 class="font-weight-bold text-primary">
+									{{ filteredMenu[viewingProductNumber].costString }}
+								</h5>
+							</BCol>
+							<BCol cols="12">
+								{{ filteredMenu[viewingProductNumber].description }}
+							</BCol>
+						</BRow>
+					</BCardBody>
+				</BCard>
+			</div>
+		</div>
 	</section>
 </template>
 
@@ -52,10 +101,15 @@
 		data() {
 			return {
 				loading: true,
+
 				currentTab: 'all',
+				
 				menu: menu,
 				filteredMenu: menu,
-				placeholderImg: require('../../assets/images/company/logo.png')
+				placeholderImg: require('../../assets/images/company/logo.png'),
+
+				viewingProduct: false,
+				viewingProductNumber: 0,
 			}
 		},
 
@@ -77,6 +131,11 @@
 				}
 
 				this.loading = false
+			},
+
+			viewProduct(i) {
+				this.viewingProduct = true
+				this.viewingProductNumber = i
 			}
 		},
 
@@ -166,5 +225,20 @@
 	}
 	.menu-grid-desc p {
 		margin-bottom: 0px;
+	}
+
+
+	/***** OVERLAY *****/
+	.overlay {
+		z-index: 2000;
+		top: 0;
+		left: 0;
+		background-color: rgb(0, 0, 0);
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.overlay-content {
+		top: 2vh;
+		height: 96vh;
 	}
 </style>
