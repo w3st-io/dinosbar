@@ -1,7 +1,13 @@
 <template>
 	<BRow class="py-5">
 		<BCol cols="12" md="6">
-			<div>
+			<div
+				v-rellax
+				data-rellax-xs-speed="0"
+				data-rellax-mobile-speed="0"
+				data-rellax-tablet-speed="0"
+				data-rellax-desktop-speed="0"
+			>
 				<h1 class="text-center font-weight-bold text-primary">
 					About {{ companyInfo.companyShortName }}
 				</h1>
@@ -34,9 +40,13 @@
 			<div class="text-center">
 				<img
 					:src="companyInfo.locationImage"
-					class="w-100"
+					class="w-100 shadow"
 					style="max-width: 600px;"
-					data-aos="fade"
+					v-rellax
+					data-rellax-xs-speed="0"
+					data-rellax-mobile-speed="0"
+					data-rellax-tablet-speed="0"
+					data-rellax-desktop-speed="1"
 				>
 			</div>
 		</BCol>
