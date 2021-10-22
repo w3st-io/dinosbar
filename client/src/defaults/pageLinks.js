@@ -36,10 +36,4 @@ module.exports = [
 		text: 'About',
 		children: [],
 	},
-	{
-		path: '/gallery',
-		text: 'Gallery',
-		children: [],
-
-	},
 ]
