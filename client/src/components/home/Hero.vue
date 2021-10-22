@@ -39,11 +39,15 @@
 
 		<!-- PUT IN CENTER OF SLIDER -->
 		<div class="slider-center">
-			<SocialMediaPlug size="3x" class="my-3" />
+			<SocialMediaPlug
+				size="2.5x"
+				variant="light"
+				class="d-none d-sm-block my-3 py-2 rounded bg-shade-darker"
+			/>
 
 			<a :href="companyInfo.googleMapsLink" target="_blank">
-				<BButton variant="dark" size="lg" class="">
-					<h3 class="m-0">
+				<BButton variant="dark" size="lg" class="shadow">
+					<h3 class="m-0 google-maps-btn-text">
 						<MapPinIcon size="1x" />
 						Google Maps
 					</h3>
@@ -186,6 +190,14 @@
 		@media (min-width: 800px) {
 			-webkit-animation: mover 1.5s infinite  alternate;
 			animation: mover 1.5s infinite  alternate;
+		}
+	}
+
+	.google-maps-btn-text {
+		font-size: 3vw !important;
+
+		@media screen and (min-width: 1600px) {
+			font-size: 2em !important;
 		}
 	}
 
