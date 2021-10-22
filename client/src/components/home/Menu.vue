@@ -76,8 +76,9 @@
 					no-body
 					bg-variant="light"
 					text-variant="dark"
+					border-variant="primary"
 					class="m-auto h-100 text-center"
-					style="max-width: 500px;"
+					style="max-width: 800px;"
 				>
 					<BCardHeader>
 						<BButton
@@ -92,23 +93,26 @@
 					<BCardBody style="overflow-y: auto;">
 						<BRow>
 							<BCol cols="12" class="text-center">
-								<h6 class="font-weight-bold text-primary">
-									{{ filteredMenu[viewingProductNumber].name }}
-								</h6>
 								<img
 									:src="filteredMenu[viewingProductNumber].img || placeholderImg"
 									class="w-100 mx-auto my-3"
 									style="max-width: 350px;"
 								>
-								<h5 class="font-weight-bold text-primary">
-									{{ filteredMenu[viewingProductNumber].costString }}
-								</h5>
 							</BCol>
 							<BCol cols="12">
-								{{ filteredMenu[viewingProductNumber].description }}
+								<h4 class="font-weight-bold text-primary">
+									{{ filteredMenu[viewingProductNumber].name }}
+								</h4>
+								<h5>{{ filteredMenu[viewingProductNumber].description }}</h5>
 							</BCol>
 						</BRow>
 					</BCardBody>
+
+					<BCardFooter class="bg-primary">
+						<h5 class="m-0 font-weight-bold text-light">
+							{{ filteredMenu[viewingProductNumber].costString }}
+						</h5>
+					</BCardFooter>
 				</BCard>
 			</div>
 		</div>
@@ -127,7 +131,7 @@
 				
 				menu: menu,
 				filteredMenu: menu,
-				placeholderImg: require('../../assets/images/company/logo.png'),
+				placeholderImg: require('../../assets/images/logo.jpg'),
 
 				viewingProduct: false,
 				viewingProductNumber: 0,
@@ -260,6 +264,6 @@
 
 	.overlay-content {
 		top: 2vh;
-		height: 96vh;
+		max-height: 96vh;
 	}
 </style>

@@ -53,8 +53,8 @@
 
 		<!-- Mobile Menu -->
 		<div
-			class="d-flex d-lg-none m-0 p-0 text-right"
-			:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
+			class="d-flex d-lg-none m-0 p-0 text-right bg-shade-darker transition"
+			:class="[navClass, { 'bg-dark': !$store.state.isHomePage }]"
 		>
 			<div class="text-center w-100 py-3" style="max-width: 150px;">
 				<RouterLink to="/">
@@ -68,7 +68,7 @@
 			<!-- [HIDDEN] Menu Button -->
 			<BButton
 				variant="none"
-				class="ml-auto px-5 text-white"
+				class="ml-auto px-5 text-primary"
 				@click="toggle()"
 			><MenuIcon size="3x" /></BButton>
 		</div>
