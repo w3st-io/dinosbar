@@ -39,11 +39,12 @@
 		</VueTinySlider>
 
 		<!-- PUT IN CENTER OF SLIDER -->
-		<div class="slider-center">
+		<div class="text-center slider-center">
 			<SocialMediaPlug
 				size="2.5x"
-				variant="light"
-				class="d-none d-sm-block my-3 py-2 rounded bg-shade-darker"
+				variant="primary"
+				class="d-none d-sm-block mx-auto my-3 py-2 rounded bg-shade-darker"
+				style="max-width: 130px;"
 			/>
 
 			<a :href="companyInfo.googleMapsLink" target="_blank">

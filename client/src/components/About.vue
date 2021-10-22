@@ -2,7 +2,7 @@
 	<BRow class="py-5">
 		<BCol cols="12" md="6">
 			<div>
-				<h1 class="text-center font-weight-bold">
+				<h1 class="text-center font-weight-bold text-primary">
 					About {{ companyInfo.companyShortName }}
 				</h1>
 				<h6 class="text-center text-muted">

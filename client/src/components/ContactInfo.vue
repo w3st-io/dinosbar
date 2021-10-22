@@ -7,9 +7,9 @@
 					<i class="ion-email">
 						<MailIcon size="1.1x" />
 					</i>
-					<h6 class="font-weight-bold">
+					<h5 class="font-weight-bold">
 						Email
-					</h6>
+					</h5>
 					<h6 class="font-weight-bold">
 						<a :href="companyInfo.emailLink" class="text-light">
 							{{ companyInfo.email }}
@@ -22,9 +22,9 @@
 					<i class="ion-email">
 						<ClockIcon size="1.1x" />
 					</i>
-					<h6 class="font-weight-bold">
+					<h5 class="font-weight-bold">
 						Group Reservations
-					</h6>
+					</h5>
 					<h6 class="font-weight-bold">
 						<a :href="companyInfo.phoneNumberLink" class="text-light">
 							{{ companyInfo.phoneNumber }}
@@ -37,9 +37,9 @@
 					<i class="ion-email">
 						<MapIcon size="1.1x" />
 					</i>
-					<h6 class="font-weight-bold">
+					<h5 class="font-weight-bold">
 						Location
-					</h6>
+					</h5>
 					<h6 class="font-weight-bold">
 						<a :href="companyInfo.googleMapsLink" class="text-light">
 							{{ companyInfo.address }}

@@ -1,9 +1,8 @@
 <template>
 	<section id="menu">
 		<div class="text-center">
-			<h1 class="title-1">Our Menu</h1>
-			<h5 class="subtitle"></h5>
-			<div class="space-30"></div>
+			<h1 class="m-0 text-primary">Our Menu</h1>
+			<hr class="mb-4 bg-light" style="max-width: 100px;">
 		</div>
 		<ul class="menu-filter-list list-inline text-center">
 			<li
