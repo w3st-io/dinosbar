@@ -49,7 +49,7 @@ export default {
 	data() {
 		return {
 			menu: menu,
-			placeholderImg: require('../../assets/images/company-logo.png')
+			placeholderImg: require('../../assets/images/company/logo.png')
 		}
 	},
 	created() {

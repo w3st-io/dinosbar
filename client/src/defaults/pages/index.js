@@ -36,12 +36,4 @@ module.exports = {
 		hoursOfOperation: companyInfo.hoursOfOperation,
 		text: 'By Appointments',
 	},
-
-	bodyDetails: {
-		row0: {
-			image: require('../../assets/images/pages/index/dinos-front.png'),
-			header: `About Dino's`,
-			aboutCompanyHTML: companyInfo.aboutHTML
-		},
-	},
 }

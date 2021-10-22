@@ -9,42 +9,7 @@
 		<!-- About Dinos Bar & Grill -->
 		<BContainer fluid class="bg-white">
 			<BContainer class="py-5">
-				<BRow class="py-5">
-					<BCol cols="12" md="6">
-						<div>
-							<h1 class="text-center font-weight-bold">
-								{{ pageData.bodyDetails.row0.header }}
-							</h1>
-							<h6 class="text-center text-muted">
-								{{ pageData.companyInfo.companyCaption1 }}
-							</h6>
-							<br>
-							<p
-								v-html="pageData.companyInfo.aboutHTML"
-								class="mb-4 h5 text-dark"
-								data-aos="fade-up"
-							></p>
-							<div class="text-center">
-								<img
-								:src="signImage"
-								class="w-100"
-								style="max-width: 200px;"
-							>
-							</div>
-						</div>
-					</BCol>
-
-					<BCol cols="12" md="6" class="d-none d-md-block">
-						<div class="text-center">
-							<img
-								:src="pageData.bodyDetails.row0.image"
-								class="w-100"
-								style="max-width: 600px;"
-							>
-						</div>
-					</BCol>
-
-				</BRow>
+				<About />
 			</BContainer>
 		</BContainer>
 
@@ -78,6 +43,7 @@
 
 <script>
 	// [IMPORT] Personal //
+	import About from '@/components/About'
 	import ContactInfo from '@/components/home/ContactInfo'
 	import FoodImages from '@/components/home/FoodImages'
 	import Hero from '@/components/home/Hero'
@@ -92,6 +58,7 @@
 		name: 'Home',
 
 		components: {
+			About,
 			ContactInfo,
 			FoodImages,
 			Hero,
@@ -109,7 +76,6 @@
 				reikiTitle: 'Reiki Title',
 				reikiDescription: 'Reiki description goes here',
 				services: [],
-				signImage: require('../assets/images/pages/index/sign.png')
 			}
 		},
 
