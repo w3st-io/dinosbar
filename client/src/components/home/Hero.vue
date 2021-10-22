@@ -41,12 +41,14 @@
 		<div class="slider-center">
 			<SocialMediaPlug size="3x" class="my-3" />
 
-			<BButton variant="dark" size="lg" class="">
-				<h3 class="m-0">
-					<MapPinIcon size="1x" />
-					DIRECTIONS
-				</h3>
-			</BButton>
+			<a :href="companyInfo.googleMapsLink" target="_blank">
+				<BButton variant="dark" size="lg" class="">
+					<h3 class="m-0">
+						<MapPinIcon size="1x" />
+						Google Maps
+					</h3>
+				</BButton>
+			</a>
 		</div>
 	</div>
 </template>
@@ -57,6 +59,7 @@
 	import VueTinySlider from 'vue-tiny-slider'
 
 	// [IMPORT] Personal //
+	import companyInfo from '../../defaults/companyInfo'
 	import SocialMediaPlug from '../SocialMediaPlug'
 
 	export default {
@@ -74,6 +77,8 @@
 
 		data() {
 			return {
+				companyInfo: companyInfo,
+
 				slide: 0,
 				sliding: null,
 				currentSlid: null,

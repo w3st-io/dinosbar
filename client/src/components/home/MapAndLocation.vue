@@ -10,12 +10,14 @@
 								{{ companyInfo.address }}
 							</h3>
 
-							<BButton variant="light" size="lg">
-								<h4 class="m-0">
-									<MapPinIcon size="1x" variant="dark" />
-									GOOGLE MAPS
-								</h4>
-							</BButton>
+							<a :href="companyInfo.googleMapsLink" target="_blank">
+								<BButton variant="light" size="lg">
+									<h4 class="m-0">
+										<MapPinIcon size="1x" variant="dark" />
+										Google Maps
+									</h4>
+								</BButton>
+							</a>
 						</div>
 					</div>
 				</div>
