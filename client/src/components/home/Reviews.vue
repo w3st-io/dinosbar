@@ -1,6 +1,6 @@
 <template>
 	<div class="testimonials">
-		<BContainer class="py-4">
+		<BContainer class="py-1">
 			<div class="text-center">
 				<h1 class="title-1">Customer <span class="text-primary">Reviews</span></h1>
 				<h5 class="mb-5 text-info">What they say</h5>
@@ -11,7 +11,6 @@
 				<div
 					v-for="(r, i) in reviews" :key="i"
 					class="testimonials-slider text-center"
-					style="height: 188px;"
 				>
 					<ul class="slides list-unstyled">
 						<li class="clone">
@@ -27,11 +26,11 @@
 									{{ r.name }}
 									<small>Dino's Customer</small>
 								</h4>
-								<i class="ion-star"></i>
-								<i class="ion-star"></i>
-								<i class="ion-star"></i>
-								<i class="ion-star"></i>
-								<i class="ion-star"></i>
+								<i class="ion-star">★</i>
+								<i class="ion-star">★</i>
+								<i class="ion-star">★</i>
+								<i class="ion-star">★</i>
+								<i class="ion-star">★</i>
 							</div>
 						</li>
 					</ul>
@@ -56,7 +55,7 @@
 					autoplay: true,
 					autoplayButtonOutput: false,
 					items: 1,
-					autoplayTimeout: 3000,
+					autoplayTimeout: 5000,
 					speed: 1000,
 				},
 
@@ -67,14 +66,14 @@
 						quote: 'Love this place! Great atmosphere and delicious food.',
 					},
 					{
-						name: 'Vanessa C.',
-						img: require('../../assets/images/avtar-1.jpg'),
-						quote: 'Love this place! Great atmosphere and delicious food.',
+						name: 'Lisa D.',
+						img: require('../../assets/images/avtar-2.png'),
+						quote: 'Great food and beer selection.  The chef came out and recommended the ravioli.  They were excellent.'
 					},
 					{
-						name: 'Vanessa C.',
-						img: require('../../assets/images/avtar-1.jpg'),
-						quote: 'Love this place! Great atmosphere and delicious food.',
+						name: 'Beatriz M.',
+						img: require('../../assets/images/avtar-3.png'),
+						quote: 'Great place. Service was most accommodating and the food was delicious.',
 					},
 				],
 			}
