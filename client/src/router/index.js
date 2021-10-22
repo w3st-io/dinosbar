@@ -8,8 +8,7 @@ import index from '@/pages'
 import about from '@/pages/about'
 import blog from '@/pages/blog'
 import book from '@/pages/book'
-import contact from "@/pages/contact"
-import directions from '@/pages/directions'
+import contact from '@/pages/contact'
 import faq from '@/pages/faq'
 import gallery from '@/pages/gallery'
 import ourTeam from '@/pages/our-team'
@@ -56,11 +55,6 @@ const router = new VueRouter({
 			path: '/contact',
 			name: 'contact',
 			component: contact,
-		},
-		{
-			path: '/directions',
-			name: 'directions',
-			component: directions,
 		},
 		{
 			path: '/faq',

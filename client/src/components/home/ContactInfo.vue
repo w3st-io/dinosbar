@@ -3,51 +3,48 @@
 		<BContainer class="py-4">
 			<BRow class="m-0 p-0 bg-primary contact-info">
 				<!-- EMAIL -->
-				<BCol cols="12" md="4">
+				<BCol cols="12" lg="6" xl="4" class="py-3">
 					<i class="ion-email">
 						<MailIcon size="1.1x" />
 					</i>
-					<h3 class="font-weight-bold">
+					<h6 class="font-weight-bold">
 						Email
-					</h3>
+					</h6>
 					<h6 class="font-weight-bold">
 						<a :href="companyInfo.emailLink" class="text-light">
 							{{ companyInfo.email }}
 						</a>
 					</h6>
-					<br>
 				</BCol>
 
 				<!-- RESERVATION -->
-				<BCol cols="12" md="4">
+				<BCol cols="12" lg="6" xl="4" class="py-3">
 					<i class="ion-email">
 						<ClockIcon size="1.1x" />
 					</i>
-					<h3 class="font-weight-bold">
+					<h6 class="font-weight-bold">
 						Group Reservations
-					</h3>
+					</h6>
 					<h6 class="font-weight-bold">
 						<a :href="companyInfo.phoneNumberLink" class="text-light">
 							{{ companyInfo.phoneNumber }}
 						</a>
 					</h6>
-					<br>
 				</BCol>
 
 				<!-- LOCATION -->
-				<BCol cols="12" md="4">
+				<BCol cols="12" lg="6" xl="4" class="py-3">
 					<i class="ion-email">
 						<MapIcon size="1.1x" />
 					</i>
-					<h3 class="font-weight-bold">
+					<h6 class="font-weight-bold">
 						Location
-					</h3>
+					</h6>
 					<h6 class="font-weight-bold">
 						<a :href="companyInfo.googleMapsLink" class="text-light">
 							{{ companyInfo.address }}
 						</a>
 					</h6>
-					<br>
 				</BCol>
 			</BRow>
 		</BContainer>
