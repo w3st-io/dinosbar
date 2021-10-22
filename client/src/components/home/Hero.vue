@@ -24,7 +24,8 @@
 							<h1
 								class="
 									m-0
-									p-3
+									p-1
+									p-sm-3
 									font-weight-light
 									text-white
 									border border-white
@@ -139,49 +140,41 @@
 
 	.slide-center {
 		position: absolute;
-		top: 35%;
+		top: 55%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 
-		// On screen below 1200px //
-		@media (max-width: 1400px) { top: 35%; }
+		@media (min-width: 768px) { top: 50%; }
+
+		@media (min-width: 992px) { top: 45%; }
 		
-		// On screen below 1200px //
-		@media (max-width: 1200px) { top: 40%; }
+		@media (min-width: 1200px) { top: 40%; }
 
-		// On screen below 992px //
-		@media (max-width: 992px) { top: 45%; }
-
-		// On screen below 768px //
-		@media (max-width: 768px) { top: 50%; }
+		@media (min-width: 1400px) { top: 35%; }
 	}
 
 	.slide-text {
-		font-size: 6em;
-		border-width: 10px !important;
+		font-size: 1em;
+		border-width: 1px !important;
 
-		// On screen below 1200px //
-		@media (max-width: 1400px) {
-			font-size: 4em;
-			border-width: 8px !important;
-		}
-		
-		// On screen below 1200px //
-		@media (max-width: 1200px) {
-			font-size: 3em;
-			border-width: 6px !important;
-		}
-
-		// On screen below 992px //
-		@media (max-width: 992px) {
+		@media (min-width: 768px) {
 			font-size: 2em;
+			border-width: 2px !important;
+		}
+
+		@media (min-width: 992px) {
+			font-size: 3em;
 			border-width: 4px !important;
 		}
 
-		// On screen below 768px //
-		@media (max-width: 768px) {
-			font-size: 1em;
-			border-width: 2px !important;
+		@media (min-width: 1200px) {
+			font-size: 4em;
+			border-width: 6px !important;
+		}
+
+		@media (min-width: 1400px) {
+			font-size: 5em;
+			border-width: 6px !important;
 		}
 	}
 

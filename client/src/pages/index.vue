@@ -48,7 +48,7 @@
 	import FoodImages from '@/components/home/FoodImages'
 	import Hero from '@/components/home/Hero'
 	import MapAndLocation from '@/components/MapAndLocation'
-	import Menu from '@/components/home/Menu'
+	import Menu from '@/components/Menu'
 	import Reviews from '@/components/home/Reviews'
 	import pageData from '@/defaults/pages'
 	import router from '@/router'

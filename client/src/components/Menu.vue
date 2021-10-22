@@ -131,7 +131,7 @@
 				
 				menu: menu,
 				filteredMenu: menu,
-				placeholderImg: require('../../assets/images/logo.jpg'),
+				placeholderImg: require('../assets/images/logo.jpg'),
 
 				viewingProduct: false,
 				viewingProductNumber: 0,

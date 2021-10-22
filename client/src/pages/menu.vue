@@ -9,7 +9,7 @@
 
 <script>
 	// [IMPORT] Personal //
-	import Menu from '@/components/home/Menu'
+	import Menu from '@/components//Menu'
 
 	export default {
 		components: {
