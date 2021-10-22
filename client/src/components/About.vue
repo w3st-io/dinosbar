@@ -14,12 +14,18 @@
 					class="mb-4 h5 text-dark"
 					data-aos="fade-up"
 				></p>
-				<div class="text-center">
+				<div class="text-center mb-5">
 					<img
 					:src="companyInfo.signImage"
 					class="w-100"
 					style="max-width: 200px;"
 				>
+				</div>
+
+				<div class="text-center">
+					<RouterLink to="/contact">
+						<BButton size="lg" class="">Contact Us</BButton>
+					</RouterLink>
 				</div>
 			</div>
 		</BCol>
@@ -30,6 +36,7 @@
 					:src="companyInfo.locationImage"
 					class="w-100"
 					style="max-width: 600px;"
+					data-aos="fade"
 				>
 			</div>
 		</BCol>
