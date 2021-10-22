@@ -9,43 +9,44 @@
 				<RouterLink to="/">
 					<BButton
 						variant="none"
-						class="mx-3 py-3 text-white menu-link"
+						class="mx-3 mx-lg-4 py-3 text-white font-weight-bold menu-link"
 						:class="titleClass"
-						style="width: 100px;"
-					>HOME</BButton>
+					><h4 class="m-0">HOME</h4></BButton>
 				</RouterLink>
 
 				<RouterLink to="/menu">
 					<BButton
 						variant="none"
-						class="mx-3 py-3 text-white menu-link"
+						class="mx-3 mx-lg-4 py-3 text-white font-weight-bold menu-link"
 						:class="titleClass"
-						style="width: 100px;"
-					>MENU</BButton>
+					><h4 class="m-0">MENU</h4></BButton>
 				</RouterLink>
 			</div>
 
 			<div class="w-100" style="max-width: 350px;">
-				<img :src="require('../../assets/images/dinos-dark.png')" class="w-100">
+				<RouterLink to="/">
+					<img
+						:src="require('../../assets/images/dinos-dark.png')"
+						class="w-100"
+					>
+				</RouterLink>
 			</div>
 
 			<div class="mr-auto">
 				<RouterLink to="/contact" class="">
 					<BButton
 						variant="none"
-						class="mx-3 py-3 text-white menu-link"
+						class="mx-3 mx-lg-4 py-3 text-white font-weight-bold menu-link"
 						:class="titleClass"
-						style="width: 100px;"
-					>CONTACT</BButton>
+					><h4 class="m-0">CONTACT</h4></BButton>
 				</RouterLink>
 
 				<RouterLink to="/about" class="">
 					<BButton
 						variant="none"
-						class="mx-3 py-3 text-white menu-link"
+						class="mx-3 mx-lg-4 py-3 text-white font-weight-bold menu-link"
 						:class="titleClass"
-						style="width: 100px;"
-					>ABOUT</BButton>
+					><h4 class="m-0">ABOUT</h4></BButton>
 				</RouterLink>
 			</div>
 		</div>
@@ -56,7 +57,12 @@
 			:class="[navClass, { 'bg-secondary': !$store.state.isHomePage }]"
 		>
 			<div class="text-center w-100 py-3" style="max-width: 150px;">
-				<img :src="require('../../assets/images/dinos-dark.png')" class="w-100">
+				<RouterLink to="/">
+				<img
+					:src="require('../../assets/images/dinos-dark.png')"
+					class="w-100"
+				>
+				</RouterLink>
 			</div>
 
 			<!-- [HIDDEN] Menu Button -->
@@ -105,7 +111,7 @@
 
 			handleScroll() {
 				if (window.scrollY > 0) {
-					this.navClass = 'bg-shade'
+					this.navClass = 'bg-shade-darker'
 					this.titleClass = 'text-white'
 				}
 				else {

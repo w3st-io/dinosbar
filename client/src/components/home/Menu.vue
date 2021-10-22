@@ -15,7 +15,7 @@
 		<BRow v-if="!loading" class="menu-filter-items">
 			<BCol
 				v-for="(item, i) in filteredMenu" :key="i"
-				cols="12" sm="12" md="4"
+				cols="12" sm="6" md="6" lg="4"
 				class="start menu-item"
 			>
 				<div class="menu-box clearfix">

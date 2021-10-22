@@ -1,10 +1,9 @@
 // [REQUIRE] //
-//const feather = require('feather-icons')
+const feather = require('feather-icons')
 
 
 // [EXPORT] //
 module.exports = [
-	/*
 	{
 		path: '/',
 		text: 'Home',
@@ -22,39 +21,19 @@ module.exports = [
 		}),
 		children: [],
 	},
-	*/
-	{
-		path: '/services',
-		text: 'Services',
-		children: [
-			{
-				path: '/services/reiki',
-				text: 'Services',
-			},
-		],
-	},
-	/*
 	{
 		path: '/menu',
 		text: 'Menu',
 		children: [],
 	},
-	*/
-	{
-		path: '/about',
-		text: 'About',
-		children: [],
-	},
-	/*
-	{
-		path: '/directions',
-		text: 'Directions',
-		children: [],
-	},
-	*/
 	{
 		path: '/contact',
 		text: 'Contact',
+		children: [],
+	},
+	{
+		path: '/about',
+		text: 'About',
 		children: [],
 	},
 	{
@@ -62,15 +41,5 @@ module.exports = [
 		text: 'Gallery',
 		children: [],
 
-	},
-	{
-		path: '/faq',
-		text: 'FAQ',
-		children: [],
-	},
-	{
-		path: '/blog',
-		text: 'Blog',
-		children: [],
 	},
 ]
