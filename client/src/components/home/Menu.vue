@@ -6,15 +6,15 @@
 			<div class="space-30"></div>
 		</div>
 		<ul class="menu-filter-list list-inline text-center">
-			<li class="is-checked" data-filter="*">All</li>
-			<li data-filter=".start">Appetizers</li>
-			<li data-filter=".lunch">Salads</li>
-			<li data-filter=".dinner">Entrees</li>
+			<li @click="filterMenu('all')" :class="{ 'is-checked': currentTab == 'all' }">All</li>
+			<li @click="filterMenu('appetizer')" :class="{ 'is-checked': currentTab == 'appetizer' }">Appetizers</li>
+			<li @click="filterMenu('salad')" :class="{ 'is-checked': currentTab == 'salad' }">Salads</li>
+			<li @click="filterMenu('entree')" :class="{ 'is-checked': currentTab == 'entree' }">Entrees</li>
 		</ul>
 
-		<BRow class="menu-filter-items">
+		<BRow v-if="!loading" class="menu-filter-items">
 			<BCol
-				v-for="(item, i) in menu" :key="i"
+				v-for="(item, i) in filteredMenu" :key="i"
 				cols="12" sm="12" md="4"
 				class="start menu-item"
 			>
@@ -43,21 +43,44 @@
 </template>
 
 <script>
-import menu from '../../defaults/menu'
+	import menu from '../../defaults/menu'
 
-export default {
-	data() {
-		return {
-			menu: menu,
-			placeholderImg: require('../../assets/images/company/logo.png')
-		}
-	},
-	created() {
-		setTimeout(() => {
-          this.classs = 'd-none'
-        }, 3000)
-	},
-}
+	export default {
+		data() {
+			return {
+				loading: true,
+				currentTab: 'all',
+				menu: menu,
+				filteredMenu: menu,
+				placeholderImg: require('../../assets/images/company/logo.png')
+			}
+		},
+
+		methods: {
+			filterMenu(filter) {
+				this.loading = true
+				this.currentTab = filter
+				this.filteredMenu = []
+
+				if (filter == 'all') { this.filteredMenu = this.menu }
+				else {
+					for (let i = 0; i < this.menu.length; i++) {
+						const mi = this.menu[i]
+					
+						if (mi.category == filter) {
+							this.filteredMenu.push(mi)
+						}
+					}
+				}
+
+				this.loading = false
+			}
+		},
+
+		created() {
+			this.loading = false
+		},
+	}
 </script>
 
 <style lang="scss" scoped>

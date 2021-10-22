@@ -5,7 +5,7 @@ module.exports = [
 		img: '',
 		costString: '$10.00',
 		description: 'Mild, Medium, Hot, Atomic, Teriyaki, BBQ, Thai',
-		cateogy: 'appetizer',
+		category: 'appetizer',
 	},
 	{
 		name: 'Chicken Fingers',
@@ -13,7 +13,7 @@ module.exports = [
 		img: '',
 		costString: '$9.50',
 		description: 'Served with honey mustard.',
-		cateogy: 'appetizer',
+		category: 'appetizer',
 	},
 	{
 		name: 'Mozzarella Sticks',
@@ -21,7 +21,7 @@ module.exports = [
 		img: '',
 		costString: '$8.5',
 		description: 'Served with marinara sauce',
-		cateogy: 'appetizer',
+		category: 'appetizer',
 	},
 	{
 		name: 'Jalepeno Poppers',
@@ -29,7 +29,7 @@ module.exports = [
 		img: '',
 		costString: '$8.00',
 		description: 'Served with horseradish sauce',
-		cateogy: 'appetizer',
+		category: 'appetizer',
 	},
 	{
 		name: 'Dino\'s Mac & Cheese',
@@ -37,7 +37,7 @@ module.exports = [
 		img: '',
 		costString: '$9.00',
 		description: 'Classic Mac & Cheese. Add bacon $2',
-		cateogy: 'appetizer',
+		category: 'appetizer',
 	},
 	{
 		name: 'Onion Rings',
@@ -45,7 +45,7 @@ module.exports = [
 		img: '',
 		costString: '$6.00',
 		description: 'Fried crisp, served with dipping sauce',
-		cateogy: 'appetizer',
+		category: 'appetizer',
 	},
 	{
 		name: 'Hand Cut French Fries',
@@ -53,7 +53,7 @@ module.exports = [
 		img: '',
 		costString: '$5.00',
 		description: 'w/cheese $6, w/cheese & gravy $7, w/chili & cheese $8, w/gravy & mozzarella',
-		cateogy: 'appetizer',
+		category: 'appetizer',
 	},
 	{
 		name: 'House Salad',
@@ -61,7 +61,7 @@ module.exports = [
 		img: '',
 		costString: '$9.00',
 		description: 'Large salad, with fresh seasonal greens, veggies & house dressing. w/chicken $4',
-		cateogy: 'salad',
+		category: 'salad',
 	},
 	{
 		name: 'Traditional Caesar Salad',
@@ -69,7 +69,7 @@ module.exports = [
 		img: '',
 		costString: '$9.00',
 		description: 'w/chicken $4',
-		cateogy: 'salad',
+		category: 'salad',
 	},
 	{
 		name: 'Insalata Italiana',
@@ -77,7 +77,7 @@ module.exports = [
 		img: '',
 		costString: '$11.00',
 		description: 'Fresh mozzarella, roasted peppers, tomato, basil, topped with balsamic vinegar',
-		cateogy: 'salad',
+		category: 'salad',
 	},
 	{
 		name: 'Roast Beef',
@@ -85,7 +85,7 @@ module.exports = [
 		img: '',
 		costString: '$11.00',
 		description: 'Fresh mozzarella, tomato, roasted peppers, balsamic vinegar. Served with hand cut fries.',
-		cateogy: 'sandwich',
+		category: 'entree',
 	},
 	{
 		name: 'Chicken Supreme',
@@ -93,7 +93,7 @@ module.exports = [
 		img: '',
 		costString: '$11.00',
 		description: 'Fresh mozzarella, tomato, roasted peppers, balsamic vinegar. Served with hand cut fries.',
-		cateogy: 'sandwich',
+		category: 'entree',
 	},
 	{
 		name: 'French Dip',
@@ -101,7 +101,7 @@ module.exports = [
 		img: '',
 		costString: '$10.00',
 		description: 'Tender roast beef sandwich, dipped in au jus. Served with hand cut fries.',
-		cateogy: 'sandwich',
+		category: 'entree',
 	},
 	{
 		name: 'Pastrami Melt',
@@ -109,7 +109,7 @@ module.exports = [
 		img: '',
 		costString: '$10.00',
 		description: 'Hot pastrami & cheese on rye bread. Served with hand cut fries.',
-		cateogy: 'sandwich',
+		category: 'entree',
 	},
 	{
 		name: 'Reuben Sandwich',
@@ -117,7 +117,7 @@ module.exports = [
 		img: '',
 		costString: '$7.79',
 		description: 'Pastrami, with sauerkraut, Russian dressing, on rye bread. Served with hand cut fries.',
-		cateogy: 'sandwich',
+		category: 'entree',
 	},
 	{
 		name: 'Turkey Club',
@@ -125,7 +125,7 @@ module.exports = [
 		img: '',
 		costString: '$10.50',
 		description: '(traditional or wrap) with bacon, lettuce, tomato, mayo',
-		cateogy: 'sandwich',
+		category: 'entree',
 	},
 	{
 		name: 'BLT',
@@ -133,6 +133,6 @@ module.exports = [
 		img: '',
 		costString: '$8.5',
 		description: 'Classic bacon, lettuce, tomato sandwich. w/avocado $1.50',
-		cateogy: 'sandwich',
+		category: 'entree',
 	},
 ]
