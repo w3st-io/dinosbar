@@ -1,9 +1,9 @@
 <template>
 	<div class="testimonials">
-		<BContainer>
+		<BContainer class="py-4">
 			<div class="text-center">
 				<h1 class="title-1">Customer <span class="text-primary">Reviews</span></h1>
-				<h5 class="mb-4 text-info">What they say</h5>
+				<h5 class="mb-5 text-info">What they say</h5>
 				<div class="space-30"></div>
 			</div>
 
