@@ -80,7 +80,7 @@
 					class="m-auto h-100 text-center"
 					style="max-width: 800px;"
 				>
-					<BCardHeader>
+					<BCardHeader class="bg-primary">
 						<BButton
 							size="sm"
 							variant="primary"
@@ -95,11 +95,11 @@
 							<BCol cols="12" class="text-center">
 								<img
 									:src="filteredMenu[viewingProductNumber].img || placeholderImg"
-									class="w-100 mx-auto my-3"
+									class="w-100 mx-auto my-5"
 									style="max-width: 350px;"
 								>
 							</BCol>
-							<BCol cols="12">
+							<BCol cols="12" class="my-3">
 								<h4 class="font-weight-bold text-primary">
 									{{ filteredMenu[viewingProductNumber].name }}
 								</h4>

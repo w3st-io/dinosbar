@@ -9,7 +9,7 @@
 				<RouterLink to="/">
 					<BButton
 						variant="none"
-						class="mx-3 mx-lg-4 py-4 text-white font-weight-bold menu-link"
+						class="mx-3 mx-lg-4 py-5 text-white font-weight-bold menu-link"
 						:class="titleClass"
 					><h4 class="m-0">HOME</h4></BButton>
 				</RouterLink>
@@ -17,7 +17,7 @@
 				<RouterLink to="/menu">
 					<BButton
 						variant="none"
-						class="mx-3 mx-lg-4 py-4 text-white font-weight-bold menu-link"
+						class="mx-3 mx-lg-4 py-5 text-white font-weight-bold menu-link"
 						:class="titleClass"
 					><h4 class="m-0">MENU</h4></BButton>
 				</RouterLink>
@@ -36,7 +36,7 @@
 				<RouterLink to="/contact" class="">
 					<BButton
 						variant="none"
-						class="mx-3 mx-lg-4 py-4 text-white font-weight-bold menu-link"
+						class="mx-3 mx-lg-4 py-5 text-white font-weight-bold menu-link"
 						:class="titleClass"
 					><h4 class="m-0">CONTACT</h4></BButton>
 				</RouterLink>
@@ -44,7 +44,7 @@
 				<RouterLink to="/about" class="">
 					<BButton
 						variant="none"
-						class="mx-3 mx-lg-4 py-4 text-white font-weight-bold menu-link"
+						class="mx-3 mx-lg-4 py-5 text-white font-weight-bold menu-link"
 						:class="titleClass"
 					><h4 class="m-0">ABOUT</h4></BButton>
 				</RouterLink>

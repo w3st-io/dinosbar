@@ -3,7 +3,7 @@
 		<BContainer>
 			<div class="text-center">
 				<h1 class="title-1">Customer <span class="text-primary">Reviews</span></h1>
-				<h5 class="text-info">What they say</h5>
+				<h5 class="mb-4 text-info">What they say</h5>
 				<div class="space-30"></div>
 			</div>
 
@@ -91,7 +91,7 @@
 		padding-top: 70px;
 		padding-bottom: 70px;
 		position: relative;
-		background-color: #f5f5f5;
+		background-color: #dacdbf;
 	}
 
 	.testimonials-slider {
