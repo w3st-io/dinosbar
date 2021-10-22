@@ -49,7 +49,7 @@ module.exports = [
 		category: 'bar-snack',
 	},
 	{
-		name: 'Chicken Tenders Basket w/Basket of Fries',
+		name: 'Chicken Tenders Basket w/Fries',
 		img: '',
 		cost: 12.5,
 		costString: '$12.50',

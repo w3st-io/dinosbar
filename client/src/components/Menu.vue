@@ -39,7 +39,8 @@
 			<BCol
 				v-for="(item, i) in filteredMenu" :key="i"
 				cols="12" sm="6" md="6" lg="4"
-				class="start menu-item"
+				class="border border-light py-2 start menu-item"
+				style="border-style: dotted !important;"
 			>
 				<div class="menu-box clearfix">
 					<div class="thumb">
@@ -51,13 +52,13 @@
 					</div>
 
 					<div class="menu-content">
-						<h4 class="text-primary">
+						<h4 class="mb-3 text-primary">
 							<a @click="viewProduct(i)" class="text-primary">
 								{{ item.name }}
 							</a>
 							<span>{{ item.costString }}</span>
 						</h4>
-						<p class="text-info">
+						<p class="mb-3 text-info">
 							{{
 								item.description.length > 100 ?
 									item.description.substring(0, 100 - 3) + '...' :
@@ -75,14 +76,14 @@
 					no-body
 					bg-variant="light"
 					text-variant="dark"
-					border-variant="primary"
+					border-variant="secondary"
 					class="m-auto h-100 text-center"
 					style="max-width: 800px;"
 				>
-					<BCardHeader class="bg-primary">
+					<BCardHeader class="bg-dark">
 						<BButton
 							size="sm"
-							variant="primary"
+							variant="outline-danger"
 							class="my-2 float-right"
 							pill
 							@click="viewingProduct = false"
@@ -181,7 +182,7 @@
 	.menu-box .menu-content h4 {
 		margin-bottom: 5px;
 		font-family: "Poppins", sans-serif;
-		border-bottom: 1px dashed #eee;
+		border-bottom: 1px dashed rgb(196, 131, 131);
 		padding-bottom: 5px;
 		font-weight: 500;
 		text-transform: uppercase;
