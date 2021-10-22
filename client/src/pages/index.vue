@@ -7,7 +7,7 @@
 		/>
 
 		<!-- About Dinos Bar & Grill -->
-		<BContainer fluid class="bg-white">
+		<BContainer fluid class="">
 			<BContainer class="py-5">
 				<About />
 			</BContainer>

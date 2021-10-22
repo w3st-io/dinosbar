@@ -91,7 +91,7 @@
 		padding-top: 70px;
 		padding-bottom: 70px;
 		position: relative;
-		background-color: #dacdbf;
+		background-color: #dfd6cd;
 	}
 
 	.testimonials-slider {
