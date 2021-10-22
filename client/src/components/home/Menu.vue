@@ -6,13 +6,34 @@
 			<div class="space-30"></div>
 		</div>
 		<ul class="menu-filter-list list-inline text-center">
-			<li @click="filterMenu('all')" :class="{ 'is-checked': currentTab == 'all' }">All</li>
-			<li @click="filterMenu('bar-snack')" :class="{ 'is-checked': currentTab == 'bar-snack' }">Bar Snacks</li>
-			<li @click="filterMenu('wings')" :class="{ 'is-checked': currentTab == 'wings' }">Wings</li>
-			<li @click="filterMenu('burger')" :class="{ 'is-checked': currentTab == 'burger' }">Burgers</li>
-			<li @click="filterMenu('sandwich')" :class="{ 'is-checked': currentTab == 'salad' }">Sandwiches</li>
-			<li @click="filterMenu('salad')" :class="{ 'is-checked': currentTab == 'salad' }">Salads</li>
-			<li @click="filterMenu('entree')" :class="{ 'is-checked': currentTab == 'entree' }">Entrees</li>
+			<li
+				@click="filterMenu('all')"
+				:class="{ 'is-checked': currentTab == 'all' }"
+			>All</li>
+			<li
+				@click="filterMenu('bar-snack')"
+				:class="{ 'is-checked': currentTab == 'bar-snack' }"
+			>Bar Snacks</li>
+			<li
+				@click="filterMenu('wings')"
+				:class="{ 'is-checked': currentTab == 'wings' }"
+			>Wings</li>
+			<li
+				@click="filterMenu('burger')"
+				:class="{ 'is-checked': currentTab == 'burger' }"
+			>Burgers</li>
+			<li
+				@click="filterMenu('sandwich')"
+				:class="{ 'is-checked': currentTab == 'salad' }"
+			>Sandwiches</li>
+			<li
+				@click="filterMenu('salad')"
+				:class="{ 'is-checked': currentTab == 'salad' }"
+			>Salads</li>
+			<li
+				@click="filterMenu('entree')"
+				:class="{ 'is-checked': currentTab == 'entree' }"
+			>Entrees</li>
 		</ul>
 
 		<BRow v-if="!loading" class="menu-filter-items">
@@ -95,7 +116,7 @@
 </template>
 
 <script>
-	import menu from '../../defaults/menu'
+	import menu from '@/defaults/menu'
 
 	export default {
 		data() {

@@ -3,7 +3,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 
-// [IMPORT] Personal //
+// [IMPORT] Personal (Ordered by path) //
+import companyInfo from '@/defaults/companyInfo'
 import index from '@/pages'
 import about from '@/pages/about'
 import contact from '@/pages/contact'
@@ -23,37 +24,62 @@ const router = new VueRouter({
 			path: '/',
 			name: '/',
 			component: index,
+			meta: {
+				title: 'Home'
+			},
 		},
 		{
 			path: '/about',
 			name: 'about',
 			component: about,
+			meta: {
+				
+				title: 'Home'
+			},
 		},
 		{
 			path: '/contact',
 			name: 'contact',
 			component: contact,
+			meta: {
+				title: 'Contact'
+			},
 		},
 		{
 			path: '/gallery',
 			name: 'gallery',
 			component: gallery,
+			meta: {
+				title: 'Gallery'
+			},
 		},
 		{
 			path: '/menu',
 			name: 'menu',
 			component: menu,
+			meta: {
+				title: 'Menu'
+			},
 		},
 		// Not-Found //
 		{
 			path: '/**',
 			name: 'not_found',
 			component: notFound,
+			meta: {
+				title: 'Not Found'
+			},
 		},
 	],
 
 	// [VUE-ROUTER] Scroll Behavior //
 	scrollBehavior () { return { x: 0, y: 0 } }
+})
+
+// [VUE-ROUTER-SET-TITLE] //
+router.beforeEach((to, from, next) => {
+	document.title = to.meta.title + ' - ' + companyInfo.companyName
+	next()
 })
 
 export default router
