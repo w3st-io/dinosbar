@@ -1,6 +1,6 @@
 <template>
 	<BRow class="m-0 p-0">
-		<BCol cols="12" lg="4" order-lg="1" class="text-light bg-dark">
+		<BCol cols="12" lg="4" order-lg="1" class="text-light bg-secondary">
 			<div class="p-xl-5">
 				<div class="p-xl-5">
 					<div class="p-lg-3 text-center">
@@ -39,7 +39,7 @@
 	import { MapPinIcon } from 'vue-feather-icons'
 
 	// [IMPORT] Personal //
-	import companyInfo from '../../defaults/companyInfo'
+	import companyInfo from '@/defaults/companyInfo'
 
 	export default {
 		components: {

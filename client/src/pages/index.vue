@@ -59,7 +59,14 @@
 		<Reviews />
 
 		<!-- FOOD IMAGES -->
-		<FoodImages />
+		<FoodImages
+			:images="[
+				'https://images2.imgbox.com/c4/10/iDBl4xhG_o.jpg',
+				'https://images2.imgbox.com/41/e3/CeI2oMmZ_o.jpg',
+				'https://images2.imgbox.com/3c/54/nB7dUa9T_o.jpg',
+				'https://images2.imgbox.com/bd/92/6rUWWZ64_o.jpg'
+			]"
+		/>
 
 		<!-- MAP AND LOCATION -->
 		<MapAndLocation />
@@ -71,15 +78,15 @@
 
 <script>
 	// [IMPORT] Personal //
-	import ContactInfo from '../components/home/ContactInfo'
-	import FoodImages from '../components/home/FoodImages'
-	import Hero from '../components/home/Hero'
-	import MapAndLocation from '../components/home/MapAndLocation'
-	import Menu from '../components/home/Menu'
-	import Reviews from '../components/home/Reviews'
-	import PageService from '../services/PageService'
+	import ContactInfo from '@/components/home/ContactInfo'
+	import FoodImages from '@/components/home/FoodImages'
+	import Hero from '@/components/home/Hero'
+	import MapAndLocation from '@/components/home/MapAndLocation'
+	import Menu from '@/components/home/Menu'
+	import Reviews from '@/components/home/Reviews'
 	import pageData from '@/defaults/pages'
 	import router from '@/router'
+	import PageService from '@/services/PageService'
 
 	export default {
 		name: 'Home',

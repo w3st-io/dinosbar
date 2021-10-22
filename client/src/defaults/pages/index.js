@@ -9,17 +9,22 @@ module.exports = {
 		{
 			caption:'',
 			text: 'DINO\'S BAR & GRILL',
-			img: require('../../assets/images/pages/index/hero1.jpg'),
+			img: require('../../assets/images/pages/index/hero/hero1.jpg'),
 		},
 		{
 			caption:'',
 			text: 'GREAT FOOD',
-			img: require('../../assets/images/pages/index/hero2.jpg'),
+			img: require('../../assets/images/pages/index/hero/hero2.jpg'),
 		},
 		{
 			caption: '',
 			text: 'SPORTS & MUSIC',
-			img: require('../../assets/images/pages/index/hero3.jpg'),
+			img: require('../../assets/images/pages/index/hero/hero3.jpg'),
+		},
+		{
+			caption: '',
+			text: 'WATCH SPORTS',
+			img: require('../../assets/images/pages/index/hero/hero4.png'),
 		},
 	],
 
