@@ -7,7 +7,7 @@
 		</div>
 		<ul class="menu-filter-list list-inline text-center">
 			<li @click="filterMenu('all')" :class="{ 'is-checked': currentTab == 'all' }">All</li>
-			<li @click="filterMenu('appetizer')" :class="{ 'is-checked': currentTab == 'appetizer' }">Appetizers</li>
+			<li @click="filterMenu('bar-snack')" :class="{ 'is-checked': currentTab == 'bar-snack' }">Bar Snacks</li>
 			<li @click="filterMenu('salad')" :class="{ 'is-checked': currentTab == 'salad' }">Salads</li>
 			<li @click="filterMenu('entree')" :class="{ 'is-checked': currentTab == 'entree' }">Entrees</li>
 		</ul>
