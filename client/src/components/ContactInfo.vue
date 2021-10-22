@@ -54,7 +54,7 @@
 <script>
 import { ClockIcon, MailIcon, MapIcon } from 'vue-feather-icons'
 
-import companyInfo from '../../defaults/companyInfo'
+import companyInfo from '../defaults/companyInfo'
 
 export default {
 	data() {

@@ -44,10 +44,10 @@
 <script>
 	// [IMPORT] Personal //
 	import About from '@/components/About'
-	import ContactInfo from '@/components/home/ContactInfo'
+	import ContactInfo from '@/components/ContactInfo'
 	import FoodImages from '@/components/home/FoodImages'
 	import Hero from '@/components/home/Hero'
-	import MapAndLocation from '@/components/home/MapAndLocation'
+	import MapAndLocation from '@/components/MapAndLocation'
 	import Menu from '@/components/home/Menu'
 	import Reviews from '@/components/home/Reviews'
 	import pageData from '@/defaults/pages'

@@ -9,8 +9,8 @@
 	// [IMPORT] //
 
 	// [IMPORT] Personal //
-	import ContactInfo from '@/components/home/ContactInfo'
-	import MapAndLocation from '@/components/home/MapAndLocation'
+	import ContactInfo from '@/components/ContactInfo'
+	import MapAndLocation from '@/components/MapAndLocation'
 	import DPage from '@/defaults/pages/directions'
 
 	export default {
