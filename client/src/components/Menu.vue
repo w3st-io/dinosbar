@@ -23,7 +23,7 @@
 			>Burgers</li>
 			<li
 				@click="filterMenu('sandwich')"
-				:class="{ 'is-checked': currentTab == 'salad' }"
+				:class="{ 'is-checked': currentTab == 'sandwich' }"
 			>Sandwiches</li>
 			<li
 				@click="filterMenu('salad')"
