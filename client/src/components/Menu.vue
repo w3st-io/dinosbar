@@ -4,7 +4,7 @@
 			<h1 class="m-0 text-primary">Our Menu</h1>
 			<hr class="mb-4 bg-light" style="max-width: 100px;">
 		</div>
-		
+
 		<ul class="menu-filter-list list-inline text-center">
 			<li
 				@click="filterMenu('all')"
@@ -39,8 +39,8 @@
 		<BRow v-if="!loading" class="menu-filter-items">
 			<BCol
 				v-for="(item, i) in filteredMenu" :key="i"
-				cols="12" sm="6" md="6" lg="4"
-				class="border border-light py-2 start menu-item"
+				cols="12" sm="12" md="6" lg="6" xl="4"
+				class="border border-light py-3 start menu-item"
 				style="border-style: dotted !important;"
 			>
 				<div class="menu-box clearfix">
@@ -71,33 +71,40 @@
 			</BCol>
 		</BRow>
 
-		<div v-if="viewingProduct" class="overlay w-100 h-100 position-fixed">
+		<!-- Product Viewer -->
+		<div
+			class="overlay w-100 h-100 position-fixed"
+			:class="{
+				'd-none': !viewingProduct,
+				'd-block': viewingProduct,
+			}"
+		>
 			<div class="overlay-content w-100 px-2 position-relative text-center">
 				<BCard
 					no-body
 					bg-variant="light"
 					text-variant="dark"
 					border-variant="secondary"
-					class="m-auto h-100 text-center"
+					class="m-auto h-100 text-center shadow"
 					style="max-width: 800px;"
 				>
 					<BCardHeader class="bg-dark">
 						<BButton
-							size="sm"
-							variant="outline-danger"
-							class="my-2 float-right"
+							variant="danger"
+							class="my-2 p-1 px-4 float-right"
 							pill
 							@click="viewingProduct = false"
+							style="border-radius: 20px !important;"
 						>✖</BButton>
 					</BCardHeader>
 
-					<BCardBody style="overflow-y: auto;">
+					<BCardBody class="overlay-content-body" style="overflow-y: auto;">
 						<BRow>
 							<BCol cols="12" class="text-center">
 								<img
 									:src="filteredMenu[viewingProductNumber].img || placeholderImg"
-									class="w-100 mx-auto my-5"
-									style="max-width: 350px;"
+									class="w-100 mx-auto mt-3 mb-5 rounded"
+									style="max-width: 400px;"
 								>
 							</BCol>
 							<BCol cols="12" class="my-3">
@@ -109,8 +116,8 @@
 						</BRow>
 					</BCardBody>
 
-					<BCardFooter class="bg-primary">
-						<h5 class="m-0 font-weight-bold text-light">
+					<BCardFooter class="bg-dark">
+						<h5 class="m-0 font-weight-bold text-primary">
 							{{ filteredMenu[viewingProductNumber].costString }}
 						</h5>
 					</BCardFooter>
@@ -162,11 +169,17 @@
 			viewProduct(i) {
 				this.viewingProduct = true
 				this.viewingProductNumber = i
-			}
+			},
 		},
 
 		created() {
 			this.loading = false
+
+			window.addEventListener('keyup', (event) => {
+				if (event.key == 'Escape') {
+					this.viewingProduct = false
+				}
+			})
 		},
 	}
 </script>
@@ -259,12 +272,24 @@
 		z-index: 2000;
 		top: 0;
 		left: 0;
-		background-color: rgb(0, 0, 0);
-		background-color: rgba(0, 0, 0, 0.6);
+
+		background: rgba(255, 255, 255, 0.1);
+
+		backdrop-filter: blur(6px);
 	}
 
 	.overlay-content {
 		top: 2vh;
 		max-height: 96vh;
+
+		@media (min-width: 768px) {
+			top: 20vh;
+			max-height: 60vh;
+		}
+	}
+
+	.overlay-content-body {
+		background-color: rgb(41, 41, 41);
+		color: white;
 	}
 </style>
