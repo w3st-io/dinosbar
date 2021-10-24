@@ -13,7 +13,7 @@
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
 						:data-rellax-desktop-speed="
-							$store.state.window.innerWidth > 1366 ? -9 : -3
+							$store.state.window.innerWidth >= 1367 ? -9 : -3
 						"
 					>
 					
