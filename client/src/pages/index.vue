@@ -14,8 +14,8 @@
 		</BContainer>
 
 		<!-- MENU -->
-		<BContainer fluid class="bg-white">
-			<Menu class="my-5" />
+		<BContainer fluid class="py-5 bg-white">
+			<Menu />
 		</BContainer>
 
 		<!-- REVIEWS -->
