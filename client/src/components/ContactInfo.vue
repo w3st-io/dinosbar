@@ -41,7 +41,7 @@
 						Location
 					</h5>
 					<h6 class="font-weight-bold">
-						<a :href="companyInfo.googleMapsLink" class="text-light">
+						<a :href="companyInfo.googleMapsLink" target="_blank" class="text-light">
 							{{ companyInfo.address }}
 						</a>
 					</h6>

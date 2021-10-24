@@ -3,11 +3,10 @@
 		<Hero
 			:slides="pageData.caraousel"
 			:maxHeight="1000"
-			class=""
 		/>
 
 		<!-- About Dinos Bar & Grill -->
-		<BContainer fluid class="">
+		<BContainer fluid>
 			<BContainer class="py-5">
 				<About />
 			</BContainer>
