@@ -40,7 +40,7 @@
 			<BCol
 				v-for="(item, i) in filteredMenu" :key="i"
 				cols="12" sm="12" md="6" lg="6" xl="4"
-				class="border border-light py-3 start menu-item"
+				class="border border-light py-4 start menu-item"
 				style="border-style: dotted !important;"
 			>
 				<div class="menu-box clearfix">
@@ -59,7 +59,7 @@
 							</a>
 							<span>{{ item.costString }}</span>
 						</h4>
-						<p class="mb-3 text-info">
+						<p class="m-0 p-0 text-info">
 							{{
 								item.description.length > 100 ?
 									item.description.substring(0, 100 - 3) + '...' :
