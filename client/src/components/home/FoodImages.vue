@@ -10,7 +10,7 @@
 				cols="6" sm="4" md="3"
 				class="m-0 p-0"
 			>
-				<img :src="img" class="w-100">
+				<img :src="img" class="w-100" :class="{ 'd-none': i >= 4}">
 			</BCol>
 		</BRow>
 	</viewer>

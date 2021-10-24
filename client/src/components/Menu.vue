@@ -1,9 +1,10 @@
 <template>
-	<section id="menu">
+	<BContainer id="menu" class="py-5">
 		<div class="text-center">
 			<h1 class="m-0 text-primary">Our Menu</h1>
 			<hr class="mb-4 bg-light" style="max-width: 100px;">
 		</div>
+		
 		<ul class="menu-filter-list list-inline text-center">
 			<li
 				@click="filterMenu('all')"
@@ -116,7 +117,7 @@
 				</BCard>
 			</div>
 		</div>
-	</section>
+	</BContainer>
 </template>
 
 <script>
