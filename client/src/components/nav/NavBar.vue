@@ -23,10 +23,10 @@
 				</RouterLink>
 			</div>
 
-			<div class="w-100" style="max-width: 350px;">
+			<div class="w-100 px-5 py-4" style="max-width: 250px;">
 				<RouterLink to="/">
 					<img
-						:src="require('../../assets/images/dinos-dark.png')"
+						:src="require('../../assets/images/company/dinos-dark.png')"
 						class="w-100"
 					>
 				</RouterLink>
@@ -56,10 +56,10 @@
 			class="d-flex d-lg-none m-0 p-0 text-right bg-shade-darker transition"
 			:class="[navClass, { 'bg-dark': !$store.state.isHomePage }]"
 		>
-			<div class="text-center w-100 py-3" style="max-width: 150px;">
+			<div class="text-center w-100 px-3 py-3" style="max-width: 130px;">
 				<RouterLink to="/">
 				<img
-					:src="require('../../assets/images/dinos-dark.png')"
+					:src="require('../../assets/images/company/dinos-dark.png')"
 					class="w-100"
 				>
 				</RouterLink>
@@ -68,7 +68,7 @@
 			<!-- [HIDDEN] Menu Button -->
 			<BButton
 				variant="none"
-				class="ml-auto px-5 text-primary"
+				class="ml-auto px-3 text-light"
 				@click="toggle()"
 			><MenuIcon size="3x" /></BButton>
 		</div>
