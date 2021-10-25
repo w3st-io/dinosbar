@@ -23,7 +23,7 @@
 				</RouterLink>
 			</div>
 
-			<div class="w-100 px-5 py-4" style="max-width: 250px;">
+			<div class="w-100 px-5 py-3" style="max-width: 250px;">
 				<RouterLink to="/">
 					<img
 						:src="require('../../assets/images/company/dinos-dark.png')"
