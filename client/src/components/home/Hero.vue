@@ -85,10 +85,6 @@
 			return {
 				companyInfo: companyInfo,
 
-				slide: 0,
-				sliding: null,
-				currentSlid: null,
-
 				mainText: 'The Boys Are Back In Town!',
 
 				options: {
