@@ -2,7 +2,13 @@
 	<div class="testimonials">
 		<BContainer class="py-1">
 			<div class="text-center">
-				<h1 class="title-1">Customer <span class="text-primary">Reviews</span></h1>
+				<h1 class="title-1">
+					Customer
+					<span
+						class="text-primary"
+						style="font-family: 'Dancing Script', cursive !important;"
+					>Reviews</span>
+				</h1>
 				<h5 class="mb-5 text-info">What they say</h5>
 				<div class="space-30"></div>
 			</div>
@@ -85,6 +91,8 @@
 </script>
 
 <style lang="scss" scoped>
+	@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 	/*testimonial slider*/
 	.testimonials {
 		padding-top: 70px;
