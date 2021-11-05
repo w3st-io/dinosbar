@@ -9,6 +9,7 @@
 						:src="s.img"
 						class="w-100"
 						v-rellax
+						data-rellax-speed="0"
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
