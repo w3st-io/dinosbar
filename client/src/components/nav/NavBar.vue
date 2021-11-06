@@ -139,6 +139,8 @@
 	}
 
 	.menu-link {
+		text-shadow: 1px 1px red;
+
 		:hover {
 			@extend .text-primary;
 		}

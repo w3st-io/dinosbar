@@ -41,21 +41,25 @@
 
 		<!-- PUT IN CENTER OF SLIDER -->
 		<div class="text-center slider-center">
-			<SocialMediaPlug
-				size="2.5x"
-				variant="primary"
-				class="d-none d-sm-block mx-auto my-3 py-2 rounded bg-shade-darker"
-				style="max-width: 130px;"
-			/>
-
 			<a :href="companyInfo.googleMapsLink" target="_blank">
-				<BButton variant="dark" size="lg" class="shadow">
-					<h3 class="m-0 google-maps-btn-text">
+				<BButton
+					variant="outline-primary"
+					class="mb-3 bg-shade text-light shadow"
+					style="border-width: 3px !important; border-radius: 50px !important; "
+				>
+					<h4 class="m-0 google-maps-btn-text">
 						<MapPinIcon size="1x" />
 						Google Maps
-					</h3>
+					</h4>
 				</BButton>
 			</a>
+
+			<SocialMediaPlug
+				size="2.4x"
+				variant="primary"
+				class="d-none d-sm-block mx-auto py-2 rounded bg-shade-darker"
+				style="max-width: 130px;"
+			/>
 		</div>
 	</div>
 </template>
@@ -154,6 +158,8 @@
 	.slide-text {
 		font-size: 1em;
 		border-width: 1px !important;
+		box-shadow: 1px 1px red;
+		text-shadow: 1px 1px red;
 
 		@media (min-width: 768px) {
 			font-size: 2em;
@@ -185,11 +191,7 @@
 	}
 
 	.google-maps-btn-text {
-		font-size: 3vw !important;
-
-		@media screen and (min-width: 1600px) {
-			font-size: 2em !important;
-		}
+		font-size: 100%;
 	}
 
 	@-webkit-keyframes mover {
