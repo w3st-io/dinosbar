@@ -65,12 +65,22 @@
 				</RouterLink>
 			</div>
 
-			<!-- [HIDDEN] Menu Button -->
-			<BButton
-				variant="none"
-				class="ml-auto px-3 text-light"
-				@click="toggle()"
-			><MenuIcon size="3x" /></BButton>
+			<div class="ml-auto">
+				<!-- [HIDDEN] Google Maps Icon -->
+				<a :href="companyInfo.googleMapsLink" target="_blank">
+				<BButton
+					variant="primary"
+					class="ml-auto h-100 px-3 text-light"
+				><MapPinIcon size="2x" /></BButton>
+				</a>
+
+				<!-- [HIDDEN] Menu Button -->
+				<BButton
+					variant="none"
+					class="px-4 px-sm-5 text-light"
+					@click="toggle()"
+				><MenuIcon size="3x" /></BButton>
+			</div>
 		</div>
 
 		<!-- Hidden Side Menu -->
@@ -80,7 +90,7 @@
 
 <script>
 	// [IMPORT] //
-	import { MenuIcon } from 'vue-feather-icons'
+	import { MenuIcon, MapPinIcon } from 'vue-feather-icons'
 
 	// [IMPORT] Personal //
 	import SideMenu from '@/components/nav/SideMenu'
@@ -91,6 +101,7 @@
 	export default {
 		components: {
 			MenuIcon,
+			MapPinIcon,
 			SideMenu,
 		},
 

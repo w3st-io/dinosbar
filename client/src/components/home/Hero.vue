@@ -40,12 +40,12 @@
 		</VueTinySlider>
 
 		<!-- PUT IN CENTER OF SLIDER -->
-		<div class="text-center slider-center">
-			<a :href="companyInfo.googleMapsLink" target="_blank">
+		<div class="d-none d-md-block text-center slider-center">
+			<a :href="companyInfo.googleMapsLink" target="_blank" class="">
 				<BButton
-					variant="outline-primary"
-					class="mb-3 bg-shade text-light shadow"
-					style="border-width: 3px !important; border-radius: 50px !important; "
+					variant="dark"
+					class="mb-3 shadow"
+					style="border-width: 3px !important;"
 				>
 					<h4 class="m-0 google-maps-btn-text">
 						<MapPinIcon size="1x" />
@@ -57,7 +57,7 @@
 			<SocialMediaPlug
 				size="2.4x"
 				variant="primary"
-				class="d-none d-sm-block mx-auto py-2 rounded bg-shade-darker"
+				class="mx-auto py-2 rounded bg-shade-darker"
 				style="max-width: 130px;"
 			/>
 		</div>
@@ -191,7 +191,7 @@
 	}
 
 	.google-maps-btn-text {
-		font-size: 100%;
+		font-size: 2.5vw;
 	}
 
 	@-webkit-keyframes mover {
