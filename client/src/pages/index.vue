@@ -38,8 +38,16 @@
 				'https://images2.imgbox.com/31/c8/6GD8j9X8_o.jpg',
 				'https://images2.imgbox.com/80/4c/SQd9l4fz_o.jpg',
 				'https://images2.imgbox.com/ae/e6/xlYuj6z7_o.jpg',
-
+				'https://images2.imgbox.com/1d/94/rKEp0rbC_o.jpg',
+				'https://images2.imgbox.com/c2/b0/xIVYeMhy_o.jpg',
+				'https://images2.imgbox.com/33/7c/wDXQ3LO0_o.jpg',
+				'https://images2.imgbox.com/b0/c1/grBrfER8_o.jpg',
+				'https://images2.imgbox.com/be/b0/KifBVMg7_o.jpg',
+				'https://images2.imgbox.com/7d/ae/171fnJAp_o.jpg',
+				'https://images2.imgbox.com/a7/e3/AQQ4l2od_o.jpg',
+				'https://images2.imgbox.com/e9/6c/UzREwvLs_o.jpeg',
 			]"
+			:isHomePage="true"
 		/>
 
 		<!-- MAP AND LOCATION -->

@@ -2,24 +2,32 @@
 	<div class="w-100 fixed-top">
 		<!-- Desktop Menu -->
 		<div
-			class="d-none d-lg-flex w-100 transition"
+			class="d-none d-xl-flex w-100 transition"
 			:class="[navClass, { 'bg-dark': !$store.state.isHomePage }]"
 		>
 			<div class="ml-auto">
 				<RouterLink to="/">
 					<BButton
 						variant="none"
-						class="mx-3 mx-lg-4 py-5 text-white font-weight-bold menu-link"
+						class="mx-1 mx-md-2 mx-lg-2 mx-xl-3 py-5 text-white font-weight-bold text-uppercase menu-link"
 						:class="titleClass"
-					><h4 class="m-0">HOME</h4></BButton>
+					><h4 class="m-0">Home</h4></BButton>
 				</RouterLink>
 
 				<RouterLink to="/menu">
 					<BButton
 						variant="none"
-						class="mx-3 mx-lg-4 py-5 text-white font-weight-bold menu-link"
+						class="mx-1 mx-md-2 mx-lg-2 mx-xl-3 py-5 text-white font-weight-bold text-uppercase menu-link"
 						:class="titleClass"
-					><h4 class="m-0">MENU</h4></BButton>
+					><h4 class="m-0">Menu</h4></BButton>
+				</RouterLink>
+
+				<RouterLink to="/contact" class="">
+					<BButton
+						variant="none"
+						class="mx-1 mx-md-2 mx-lg-2 mx-xl-3 py-5 text-white font-weight-bold text-uppercase menu-link"
+						:class="titleClass"
+					><h4 class="m-0">Contact</h4></BButton>
 				</RouterLink>
 			</div>
 
@@ -33,27 +41,35 @@
 			</div>
 
 			<div class="mr-auto">
-				<RouterLink to="/contact" class="">
-					<BButton
-						variant="none"
-						class="mx-3 mx-lg-4 py-5 text-white font-weight-bold menu-link"
-						:class="titleClass"
-					><h4 class="m-0">CONTACT</h4></BButton>
-				</RouterLink>
-
 				<RouterLink to="/about" class="">
 					<BButton
 						variant="none"
-						class="mx-3 mx-lg-4 py-5 text-white font-weight-bold menu-link"
+						class="mx-1 mx-md-2 mx-lg-2 mx-xl-3 py-5 text-white font-weight-bold text-uppercase menu-link"
 						:class="titleClass"
-					><h4 class="m-0">ABOUT</h4></BButton>
+					><h4 class="m-0">About</h4></BButton>
+				</RouterLink>
+
+				<RouterLink to="/gallery" class="">
+					<BButton
+						variant="none"
+						class="mx-1 mx-md-2 mx-lg-2 mx-xl-3 py-5 text-white font-weight-bold text-uppercase menu-link"
+						:class="titleClass"
+					><h4 class="m-0">Gallery</h4></BButton>
+				</RouterLink>
+
+				<RouterLink to="/follow-us" class="">
+					<BButton
+						variant="none"
+						class="mx-1 mx-md-2 mx-lg-2 mx-xl-3 py-5 text-white font-weight-bold text-uppercase menu-link"
+						:class="titleClass"
+					><h4 class="m-0">Follow Us</h4></BButton>
 				</RouterLink>
 			</div>
 		</div>
 
 		<!-- Mobile Menu -->
 		<div
-			class="d-flex d-lg-none m-0 p-0 text-right bg-shade-darker transition"
+			class="d-flex d-xl-none m-0 p-0 text-right bg-shade-darker transition"
 			:class="[navClass, { 'bg-dark': !$store.state.isHomePage }]"
 		>
 			<div class="text-center w-100 px-3 py-3" style="max-width: 130px;">

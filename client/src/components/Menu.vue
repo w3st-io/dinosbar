@@ -43,13 +43,19 @@
 				class="border border-light py-4 start menu-item"
 				style="border-style: dotted !important;"
 			>
+				
 				<div class="menu-box clearfix">
 					<div class="thumb">
-						<img
-							:src="item.img || placeholderImg"
-							width="70"
-							class="d-none d-sm-block"
+						<viewer
+							:options="{ title: false, transition: false, }"
+							class="text-center"
 						>
+							<img
+								:src="item.img || placeholderImg"
+								width="70"
+								class="d-none d-sm-block"
+							>
+						</viewer>
 					</div>
 
 					<div class="menu-content">
@@ -101,22 +107,19 @@
 					<BCardBody class="overlay-content-body" style="overflow-y: auto;">
 						<BRow>
 							<BCol cols="12" class="text-center">
-								<!--
-
-								<img
-									:src="filteredMenu[viewingProductNumber].img || placeholderImg"
-									class="w-100 mx-auto mt-3 mb-5 rounded"
-									style="max-width: 400px;"
+								<viewer
+									:options="{ title: false, transition: false, }"
+									class="text-center"
 								>
-								-->
+									<div class="img-holder mb-4 text-center">
 
-								<div class="img-holder mb-4 text-center">
-									<img
-										:src="filteredMenu[viewingProductNumber].img || placeholderImg"
-										v-lazy="filteredMenu[viewingProductNumber].img || placeholderImg"
-										alt="No Photo"
-									>
-								</div>
+										<img
+											:src="filteredMenu[viewingProductNumber].img || placeholderImg"
+											v-lazy="filteredMenu[viewingProductNumber].img || placeholderImg"
+											alt="No Photo"
+										>
+									</div>
+								</viewer>
 							</BCol>
 							<BCol cols="12" class="my-3">
 								<h4 class="font-weight-bold text-primary">
@@ -197,39 +200,42 @@
 
 <style lang="scss" scoped>
 	/* Menu Style */
-	.menu-box .menu-content {
-		overflow: hidden;
-
-		h4 {
-			margin-bottom: 5px;
-			font-family: "Poppins", sans-serif;
-			border-bottom: 1px dashed rgb(196, 131, 131);
-			padding-bottom: 5px;
-			font-weight: 500;
-			text-transform: uppercase;
-			font-size: 15px;
-			letter-spacing: 1px;
-
-			a {
-				color: #444;
-
-				&:hover {
-					color: #c0996b;
-				}
-			}
-
-			span {
-				float: right;
-				display: block;
-				font-family: "Lato", sans-serif;
-			}
-		}
-
+	.menu-box {
 		.thumb {
 			float: left;
 			margin-right: 20px;
 		}
+
+		.menu-content {
+			overflow: hidden;
+	
+			h4 {
+				margin-bottom: 5px;
+				font-family: "Poppins", sans-serif;
+				border-bottom: 1px dashed rgb(196, 131, 131);
+				padding-bottom: 5px;
+				font-weight: 500;
+				text-transform: uppercase;
+				font-size: 15px;
+				letter-spacing: 1px;
+	
+				a {
+					color: #444;
+	
+					&:hover {
+						color: #c0996b;
+					}
+				}
+	
+				span {
+					float: right;
+					display: block;
+					font-family: "Lato", sans-serif;
+				}
+			}
+		}
 	}
+	
 
 	/** isoptope **/
 	.menu-filter-list {
@@ -331,6 +337,7 @@
 		img {
 			float: left;
 			width:  100%;
+			//max-width: 300px;
 			height: 400px;
 			object-fit: cover;
 		}

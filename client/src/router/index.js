@@ -9,6 +9,7 @@ import index from '@/pages'
 import about from '@/pages/about'
 import contact from '@/pages/contact'
 import gallery from '@/pages/gallery'
+import followUs from '@/pages/follow-us'
 import menu from '@/pages/menu'
 import notFound from '@/pages/404'
 
@@ -51,6 +52,14 @@ const router = new VueRouter({
 			component: gallery,
 			meta: {
 				title: 'Gallery'
+			},
+		},
+		{
+			path: '/follow-us',
+			name: 'follow-us',
+			component: followUs,
+			meta: {
+				title: 'Follow Us'
 			},
 		},
 		{
