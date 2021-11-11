@@ -174,7 +174,7 @@ module.exports = [
 	},
 	{
 		name: 'Panino Parma ',
-		img: '',
+		img: 'https://images2.imgbox.com/7d/ae/171fnJAp_o.jpg',
 		cost: 16,
 		costString: '$16.00',
 		description: 'Prosciutto, mozzarella, arugula, cherry tomatoes',

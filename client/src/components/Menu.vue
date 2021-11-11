@@ -101,11 +101,22 @@
 					<BCardBody class="overlay-content-body" style="overflow-y: auto;">
 						<BRow>
 							<BCol cols="12" class="text-center">
+								<!--
+
 								<img
 									:src="filteredMenu[viewingProductNumber].img || placeholderImg"
 									class="w-100 mx-auto mt-3 mb-5 rounded"
 									style="max-width: 400px;"
 								>
+								-->
+
+								<div class="img-holder mb-4 text-center">
+									<img
+										:src="filteredMenu[viewingProductNumber].img || placeholderImg"
+										v-lazy="filteredMenu[viewingProductNumber].img || placeholderImg"
+										alt="No Photo"
+									>
+								</div>
 							</BCol>
 							<BCol cols="12" class="my-3">
 								<h4 class="font-weight-bold text-primary">
@@ -186,86 +197,103 @@
 
 <style lang="scss" scoped>
 	/* Menu Style */
-	.menu-box .thumb {
-		float: left;
-		margin-right: 20px;
-	}
 	.menu-box .menu-content {
 		overflow: hidden;
+
+		h4 {
+			margin-bottom: 5px;
+			font-family: "Poppins", sans-serif;
+			border-bottom: 1px dashed rgb(196, 131, 131);
+			padding-bottom: 5px;
+			font-weight: 500;
+			text-transform: uppercase;
+			font-size: 15px;
+			letter-spacing: 1px;
+
+			a {
+				color: #444;
+
+				&:hover {
+					color: #c0996b;
+				}
+			}
+
+			span {
+				float: right;
+				display: block;
+				font-family: "Lato", sans-serif;
+			}
+		}
+
+		.thumb {
+			float: left;
+			margin-right: 20px;
+		}
 	}
-	.menu-box .menu-content h4 {
-		margin-bottom: 5px;
-		font-family: "Poppins", sans-serif;
-		border-bottom: 1px dashed rgb(196, 131, 131);
-		padding-bottom: 5px;
-		font-weight: 500;
-		text-transform: uppercase;
-		font-size: 15px;
-		letter-spacing: 1px;
-	}
-	.menu-box .menu-content h4 a {
-		color: #444;
-	}
-	.menu-box .menu-content h4 a:hover {
-		color: #c0996b;
-	}
-	.menu-box .menu-content h4 span {
-		float: right;
-		display: block;
-		font-family: "Lato", sans-serif;
-	}
-	/**isoptope**/
+
+	/** isoptope **/
 	.menu-filter-list {
 		padding-bottom: 30px;
+
+		li {
+			display: inline-block;
+			cursor: pointer;
+			padding: 10px 20px 6px;
+			text-transform: uppercase;
+			background: #f5f5f5;
+			-moz-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+			font-family: "Poppins", sans-serif;
+
+			&.is-checked {
+				background: #ee3541;
+				color: #fff;
+			}
+
+			&:hover {
+				background: #ee3541;
+				color: #fff;
+			}
+		}
 	}
-	.menu-filter-list li {
-		display: inline-block;
-		cursor: pointer;
-		padding: 10px 20px 6px;
-		text-transform: uppercase;
-		background: #f5f5f5;
-		-moz-transition: all 0.3s;
-		-o-transition: all 0.3s;
-		-webkit-transition: all 0.3s;
-		transition: all 0.3s;
-		font-family: "Poppins", sans-serif;
-	}
-	.menu-filter-list li.is-checked,
-	.menu-filter-list li:hover {
-		background: #ee3541;
-		color: #fff;
-	}
+
 	.menu-grid {
 		display: block;
 		position: relative;
 		overflow: hidden;
+
+		img {
+			-moz-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+		}
 	}
-	.menu-grid img {
-		-moz-transition: all 0.3s;
-		-o-transition: all 0.3s;
-		-webkit-transition: all 0.3s;
-		transition: all 0.3s;
-	}
+
 	.menu-grid-desc {
 		padding: 13px 15px;
 		background: #fff;
 		color: #888;
-	}
-	.menu-grid-desc .price {
-		color: #c0996b;
-		font-weight: 700;
-		font-size: 20px;
-		line-height: 29px;
-	}
-	.menu-grid-desc h4 {
-		padding: 5px 0;
-		font-weight: 400;
-		text-transform: capitalize;
-	}
-	.menu-grid-desc p {
-		margin-bottom: 0px;
-	}
 
+		.price {
+			color: #c0996b;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 29px;
+		}
+
+		h4 {
+			padding: 5px 0;
+			font-weight: 400;
+			text-transform: capitalize;
+		}
+
+		p {
+			margin-bottom: 0px;
+		}
+	}
 
 	/***** OVERLAY *****/
 	.overlay {
@@ -279,11 +307,10 @@
 	}
 
 	.overlay-content {
-		top: 2vh;
+		padding: 30px;
 		max-height: 96vh;
 
 		@media (min-width: 768px) {
-			top: 20vh;
 			max-height: 60vh;
 		}
 	}
@@ -291,5 +318,21 @@
 	.overlay-content-body {
 		background-color: rgb(41, 41, 41);
 		color: white;
+	}
+
+	.img-holder {
+		margin: 0 auto;
+		text-align: center;
+		width: 100%;
+		max-width: 400px;
+		height: 300px;
+		overflow: hidden;
+
+		img {
+			float: left;
+			width:  100%;
+			height: 400px;
+			object-fit: cover;
+		}
 	}
 </style>
