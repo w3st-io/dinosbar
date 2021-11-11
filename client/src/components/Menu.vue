@@ -50,6 +50,7 @@
 							:options="{ title: false, transition: false, }"
 							class="text-center"
 						>
+							<!-- Thumbnail -->
 							<img
 								:src="item.img || placeholderImg"
 								width="70"
@@ -204,6 +205,8 @@
 		.thumb {
 			float: left;
 			margin-right: 20px;
+			height: 60px;
+			overflow: hidden;
 		}
 
 		.menu-content {
