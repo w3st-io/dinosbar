@@ -102,7 +102,7 @@
 		async created() {
 			this.$store.state.isHomePage = true
 
-			this.loading = false			
+			this.loading = false
 		},
 
 		destroyed() {
